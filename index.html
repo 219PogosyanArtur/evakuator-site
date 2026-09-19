@@ -447,6 +447,7 @@
     .ci-tg  { background: rgba(0,136,204,.1); }
     .ci-av  { background: rgba(0,196,130,.1); }
     .ci-em  { background: rgba(255,178,0,.1); }
+    .ci-mx  { background: rgba(71,26,255,.1); }
     .ctc-lbl  { font-size: 11px; color: var(--grey); text-transform: uppercase; letter-spacing: .5px; }
     .ctc-val  { font-size: 15px; font-weight: 600; }
     .wh-box {
@@ -466,7 +467,7 @@
       border-top: 1px solid var(--border);
       padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
     }
-    .sb-row { display: grid; grid-template-columns: repeat(4,1fr); gap: 8px; }
+    .sb-row { display: grid; grid-template-columns: repeat(5,1fr); gap: 6px; }
     .sb-btn {
       display: flex; flex-direction: column; align-items: center; gap: 3px;
       padding: 8px 4px; border-radius: var(--rs); font-size: 10px; font-weight: 700;
@@ -477,6 +478,7 @@
     .sb-wa   { background: rgba(37,211,102,.12); color: #25D366; border: 1px solid rgba(37,211,102,.2); }
     .sb-tg   { background: rgba(0,136,204,.12); color: #0088CC; border: 1px solid rgba(0,136,204,.2); }
     .sb-av   { background: rgba(0,196,130,.12); color: #00C482; border: 1px solid rgba(0,196,130,.2); }
+    .sb-mx   { background: rgba(71,26,255,.12); color: #471AFF; border: 1px solid rgba(71,26,255,.2); }
 
     /* ====== FOOTER ====== */
     .footer { background: #060810; border-top: 1px solid var(--border); padding: 64px 0 32px; }
@@ -595,8 +597,8 @@
       <li><a href="#faq">FAQ</a></li>
     </ul>
     <div class="nav-right">
-      <a href="tel:+79060204404" class="nav-phone">+7 906 020-44-04</a>
-      <a href="tel:+79060204404" class="btn btn-p btn-sm">Вызвать</a>
+      <a href="tel:+79690655980" class="nav-phone">+7 969 065-59-80</a>
+      <a href="tel:+79690655980" class="btn btn-p btn-sm">Вызвать</a>
     </div>
     <button class="burger" id="burger" aria-label="Меню">
       <span></span><span></span><span></span>
@@ -614,7 +616,7 @@
     <li><a href="#faq" onclick="closeMob()">FAQ</a></li>
     <li><a href="#contacts" onclick="closeMob()">Контакты</a></li>
   </ul>
-  <a href="tel:+79060204404" class="btn btn-p" style="margin-top:16px;width:100%;justify-content:center;"><svg class="ico"><use href="#i-phone"></use></svg> +7 906 020-44-04</a>
+  <a href="tel:+79690655980" class="btn btn-p" style="margin-top:16px;width:100%;justify-content:center;"><svg class="ico"><use href="#i-phone"></use></svg> +7 969 065-59-80</a>
 </div>
 
 <!-- ====== HERO ====== -->
@@ -641,7 +643,7 @@
         <div class="hero-ctas">
           <a href="#services" class="btn btn-p btn-lg"><svg class="ico"><use href="#i-truck"></use></svg> Подобрать эвакуатор</a>
           <a href="#calc" class="btn btn-o btn-lg"><svg class="ico"><use href="#i-chart"></use></svg> Рассчитать стоимость</a>
-          <a href="tel:+79060204404" class="btn btn-g btn-lg"><svg class="ico"><use href="#i-phone"></use></svg> Позвонить</a>
+          <a href="tel:+79690655980" class="btn btn-g btn-lg"><svg class="ico"><use href="#i-phone"></use></svg> Позвонить</a>
         </div>
         <div class="hero-chips">
           <span class="chip"><span class="chip-icon"><svg class="ico"><use href="#i-bolt"></use></svg></span>Подача от 30 мин</span>
@@ -734,7 +736,7 @@
         </div>
         <div class="svc-price">от 2 500 ₽</div>
         <div class="svc-btns">
-          <a href="tel:+79060204404" class="btn btn-p btn-sm">Заказать</a>
+          <a href="tel:+79690655980" class="btn btn-p btn-sm">Заказать</a>
           <a href="#calc" class="btn btn-o btn-sm">Рассчитать</a>
         </div>
       </div>
@@ -750,7 +752,7 @@
         </div>
         <div class="svc-price">от 3 000 ₽</div>
         <div class="svc-btns">
-          <a href="tel:+79060204404" class="btn btn-p btn-sm">Заказать</a>
+          <a href="tel:+79690655980" class="btn btn-p btn-sm">Заказать</a>
           <a href="#calc" class="btn btn-o btn-sm">Рассчитать</a>
         </div>
       </div>
@@ -766,7 +768,7 @@
         </div>
         <div class="svc-price">от 3 500 ₽</div>
         <div class="svc-btns">
-          <a href="tel:+79060204404" class="btn btn-p btn-sm">Заказать</a>
+          <a href="tel:+79690655980" class="btn btn-p btn-sm">Заказать</a>
           <a href="#calc" class="btn btn-o btn-sm">Рассчитать</a>
         </div>
       </div>
@@ -782,7 +784,7 @@
         </div>
         <div class="svc-price">от 3 500 ₽</div>
         <div class="svc-btns">
-          <a href="tel:+79060204404" class="btn btn-p btn-sm">Заказать</a>
+          <a href="tel:+79690655980" class="btn btn-p btn-sm">Заказать</a>
           <a href="#calc" class="btn btn-o btn-sm">Рассчитать</a>
         </div>
       </div>
@@ -798,7 +800,7 @@
         </div>
         <div class="svc-price">от 3 500 ₽</div>
         <div class="svc-btns">
-          <a href="tel:+79060204404" class="btn btn-p btn-sm">Вызвать срочно</a>
+          <a href="tel:+79690655980" class="btn btn-p btn-sm">Вызвать срочно</a>
           <a href="#calc" class="btn btn-o btn-sm">Рассчитать</a>
         </div>
       </div>
@@ -814,7 +816,7 @@
         </div>
         <div class="svc-price">от 3 000 ₽</div>
         <div class="svc-btns">
-          <a href="tel:+79060204404" class="btn btn-p btn-sm">Заказать</a>
+          <a href="tel:+79690655980" class="btn btn-p btn-sm">Заказать</a>
           <a href="#calc" class="btn btn-o btn-sm">Рассчитать</a>
         </div>
       </div>
@@ -889,7 +891,7 @@
 
     <div class="cta-row sf">
       <a href="#calc" class="btn btn-p btn-lg"><svg class="ico"><use href="#i-chart"></use></svg> Рассчитать точную стоимость</a>
-      <a href="tel:+79060204404" class="btn btn-o btn-lg"><svg class="ico"><use href="#i-phone"></use></svg> Позвонить</a>
+      <a href="tel:+79690655980" class="btn btn-o btn-lg"><svg class="ico"><use href="#i-phone"></use></svg> Позвонить</a>
     </div>
   </div>
 </section>
@@ -976,7 +978,7 @@
             <span class="rchip" id="chip-night"><svg class="ico"><use href="#i-moon"></use></svg> Ночной тариф +20%</span>
             <span class="rchip" id="chip-oblast"><svg class="ico"><use href="#i-pin"></use></svg> Доплата за выезд за пределы Москвы</span>
           </div>
-          <a href="tel:+79060204404" class="btn btn-p btn-lg" style="width:100%;justify-content:center;margin-bottom:12px;">
+          <a href="tel:+79690655980" class="btn btn-p btn-lg" style="width:100%;justify-content:center;margin-bottom:12px;">
             <svg class="ico"><use href="#i-phone"></use></svg> Позвонить сейчас
           </a>
           <a href="#contacts" class="btn btn-o" style="width:100%;justify-content:center;">
@@ -1100,7 +1102,7 @@
       </div>
     </div>
     <div style="text-align:center;margin-top:48px;" class="sf">
-      <a href="tel:+79060204404" class="btn btn-p btn-lg"><svg class="ico"><use href="#i-truck"></use></svg> Вызвать эвакуатор сейчас</a>
+      <a href="tel:+79690655980" class="btn btn-p btn-lg"><svg class="ico"><use href="#i-truck"></use></svg> Вызвать эвакуатор сейчас</a>
     </div>
   </div>
 </section>
@@ -1290,7 +1292,7 @@
 
     </div>
     <div style="text-align:center;margin-top:40px;" class="sf">
-      <a href="tel:+79060204404" class="btn btn-o btn-lg"><svg class="ico"><use href="#i-phone"></use></svg> Остались вопросы? Позвоните нам</a>
+      <a href="tel:+79690655980" class="btn btn-o btn-lg"><svg class="ico"><use href="#i-phone"></use></svg> Остались вопросы? Позвоните нам</a>
     </div>
   </div>
 </section>
@@ -1304,22 +1306,29 @@
     </div>
     <div class="ctc-grid">
       <div class="sf">
-        <a href="tel:+79060204404" class="ctc-ph">+7 906 020-44-04</a>
+        <a href="tel:+79690655980" class="ctc-ph">+7 969 065-59-80</a>
         <div class="ctc-ph-sub">Звонок бесплатный · Ответим за 30 секунд</div>
 
         <div class="ctc-methods">
-          <a href="https://wa.me/79060204404" class="ctc-item">
+          <a href="https://wa.me/79690655980" class="ctc-item">
             <div class="ctc-icon ci-wa"><svg class="ico"><use href="#i-chat"></use></svg></div>
             <div>
               <div class="ctc-lbl">WhatsApp</div>
-              <div class="ctc-val">+7 906 020-44-04</div>
+              <div class="ctc-val">+7 969 065-59-80</div>
             </div>
           </a>
-          <a href="https://t.me/moscowevak" class="ctc-item">
+          <a href="https://t.me/evacuator_moscow_11" class="ctc-item">
             <div class="ctc-icon ci-tg"><svg class="ico"><use href="#i-plane"></use></svg></div>
             <div>
               <div class="ctc-lbl">Telegram</div>
-              <div class="ctc-val">@moscowevak</div>
+              <div class="ctc-val">@evacuator_moscow_11</div>
+            </div>
+          </a>
+          <a href="https://max.ru/u/f9LHodD0cOLy2790gGwPDaf7JmfzwdIlO1Nl4ws1SOXW_zj95lIH9fmZnxw" class="ctc-item">
+            <div class="ctc-icon ci-mx"><svg class="ico"><use href="#i-chat"></use></svg></div>
+            <div>
+              <div class="ctc-lbl">MAX</div>
+              <div class="ctc-val">Написать в MAX</div>
             </div>
           </a>
           <a href="#" class="ctc-item">
@@ -1409,7 +1418,7 @@
         </div>
         <p class="ft-desc">Быстрый, надёжный эвакуатор для легковых и грузовых авто в Москве и Московской области. Подача от 30 минут. Работа 24/7.</p>
         <div style="margin-top:20px;display:flex;gap:10px;">
-          <a href="tel:+79060204404" style="font-family:'Russo One',sans-serif;font-size:16px;color:#fff;">+7 906 020-44-04</a>
+          <a href="tel:+79690655980" style="font-family:'Russo One',sans-serif;font-size:16px;color:#fff;">+7 969 065-59-80</a>
         </div>
       </div>
       <div>
@@ -1458,24 +1467,28 @@
   <div class="lp-ico"><svg class="ico"><use href="#i-alert"></use></svg></div>
   <div class="lp-t">Машина встала на трассе?</div>
   <p class="lp-d">Звоните — эвакуатор выедет прямо сейчас. Подача от 30 минут по Москве и МКАД.</p>
-  <a href="tel:+79060204404" class="lp-ph">+7 906 020-44-04</a>
-  <a href="tel:+79060204404" class="btn btn-p" style="width:100%;justify-content:center;">Позвонить срочно</a>
+  <a href="tel:+79690655980" class="lp-ph">+7 969 065-59-80</a>
+  <a href="tel:+79690655980" class="btn btn-p" style="width:100%;justify-content:center;">Позвонить срочно</a>
 </div>
 
 <!-- ====== MOBILE STICKY BAR ====== -->
 <div class="sb">
   <div class="sb-row">
-    <a href="tel:+79060204404" class="sb-btn sb-call">
+    <a href="tel:+79690655980" class="sb-btn sb-call">
       <span class="sb-ico"><svg class="ico"><use href="#i-phone"></use></svg></span>
       Позвонить
     </a>
-    <a href="https://wa.me/79060204404" class="sb-btn sb-wa">
+    <a href="https://wa.me/79690655980" class="sb-btn sb-wa">
       <span class="sb-ico"><svg class="ico"><use href="#i-chat"></use></svg></span>
       WhatsApp
     </a>
-    <a href="https://t.me/moscowevak" class="sb-btn sb-tg">
+    <a href="https://t.me/evacuator_moscow_11" class="sb-btn sb-tg">
       <span class="sb-ico"><svg class="ico"><use href="#i-plane"></use></svg></span>
       Telegram
+    </a>
+    <a href="https://max.ru/u/f9LHodD0cOLy2790gGwPDaf7JmfzwdIlO1Nl4ws1SOXW_zj95lIH9fmZnxw" class="sb-btn sb-mx">
+      <span class="sb-ico"><svg class="ico"><use href="#i-chat"></use></svg></span>
+      MAX
     </a>
     <a href="#" class="sb-btn sb-av">
       <span class="sb-ico"><svg class="ico"><use href="#i-tag"></use></svg></span>
@@ -1509,7 +1522,7 @@
   //    https://api.telegram.org/bot<ВАШ_ТОКЕН>/getUpdates и найдите "chat":{"id": ...} — это chat_id.
   // 3) Вставьте токен и chat_id вместо заглушек ниже — заявки начнут прилетать в Telegram.
   const TELEGRAM_BOT_TOKEN = '8881178777:AAF86zjIIig1H_XorxLs8G3CbIKJo8lf2kU';
-  const TELEGRAM_CHAT_ID   = '914252712';
+  const TELEGRAM_CHAT_ID   = '8762084741';
 
   function selectText(el) {
     if (!el) return '';
