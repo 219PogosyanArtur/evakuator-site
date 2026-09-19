@@ -1,0 +1,1691 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Эвакуатор в Москве и Московской области — подача от 30 минут, 24/7 | МоскваЭвак</title>
+  <meta name="description" content="Эвакуатор легкового авто, внедорожника, микроавтобуса и грузовика до 3,5 т. Подача от 30 минут по Москве и МКАД. Работа 24/7, фиксированные цены, работаем по договору.">
+  <meta name="keywords" content="эвакуатор москва, аренда эвакуатора москва, эвакуатор 24 часа, эвакуатор после дтп москва, эвакуатор дешево москва">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ====== RESET & ROOT ====== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; min-width: 0; }
+    :root {
+      --bg:       #08090F;
+      --bg2:      #0D1019;
+      --card:     #111520;
+      --cardh:    #161C2C;
+      --orange:   #FF4D00;
+      --orange2:  #FF6E1A;
+      --og:       linear-gradient(135deg,#FF4D00,#FF8800);
+      --yellow:   #FFB200;
+      --teal:     #00D4A3;
+      --white:    #FFFFFF;
+      --grey:     #7F8EA3;
+      --muted:    #3D4A5C;
+      --border:   rgba(255,255,255,0.07);
+      --bord-o:   rgba(255,77,0,0.28);
+      --r:        14px;
+      --rs:       8px;
+      --shadow:   0 24px 80px rgba(0,0,0,0.7);
+      --glow:     0 0 50px rgba(255,77,0,0.18);
+    }
+    html { scroll-behavior: smooth; }
+    html {
+      background: var(--bg);
+      overflow-x: hidden;
+      width: 100%;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+      width: 100%;
+      position: relative;
+    }
+    h1,h2,h3,h4 { font-family: 'Russo One', sans-serif; line-height: 1.15; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; }
+
+    /* ====== HELPERS ====== */
+    .container { max-width: 1260px; margin: 0 auto; padding: 0 24px; }
+    .section    { padding: 100px 0; }
+    .section-alt { background: var(--bg2); }
+    .text-c     { text-align: center; }
+    .text-o     { color: var(--orange2); }
+    .text-y     { color: var(--yellow); }
+    .text-t     { color: var(--teal); }
+
+    .s-tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,77,0,.1); color: var(--orange2);
+      border: 1px solid var(--bord-o); padding: 6px 18px;
+      border-radius: 100px; font-size: 12px; font-weight: 700;
+      letter-spacing: 1px; text-transform: uppercase; margin-bottom: 18px;
+    }
+    .s-title  { font-size: clamp(26px,3.5vw,46px); margin-bottom: 14px; }
+    .s-sub    { font-size: 17px; color: var(--grey); margin-bottom: 56px; max-width: 640px; line-height: 1.75; }
+
+    /* ====== BUTTONS ====== */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 15px 30px; border-radius: var(--rs);
+      font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 700;
+      cursor: pointer; border: none; transition: all .25s ease; white-space: nowrap;
+    }
+    .btn-p { background: var(--og); color: #fff; box-shadow: 0 8px 32px rgba(255,77,0,.35); }
+    .btn-p:hover { transform: translateY(-2px); box-shadow: 0 12px 42px rgba(255,77,0,.55); }
+    .btn-o { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,.18); }
+    .btn-o:hover { border-color: var(--orange); color: var(--orange2); background: rgba(255,77,0,.07); }
+    .btn-g { background: rgba(255,255,255,.06); color: #fff; backdrop-filter: blur(10px); }
+    .btn-g:hover { background: rgba(255,255,255,.12); }
+    .btn-y { background: var(--yellow); color: #000; }
+    .btn-y:hover { background: #ffc733; }
+    .btn-lg { padding: 18px 38px; font-size: 17px; }
+    .btn-sm { padding: 10px 20px; font-size: 13px; }
+
+    /* ====== NAVIGATION ====== */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 900;
+      transition: all .3s;
+    }
+    .nav.stuck {
+      background: rgba(8,9,15,.95); backdrop-filter: blur(24px);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 4px 40px rgba(0,0,0,.5);
+    }
+    .nav-in {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 72px; max-width: 1260px; margin: 0 auto; padding: 0 24px;
+    }
+    .logo { display: flex; align-items: center; gap: 10px; }
+    .logo-sq {
+      width: 40px; height: 40px; background: var(--og);
+      border-radius: 10px; display: flex; align-items: center;
+      justify-content: center; font-size: 22px;
+    }
+    .logo-name { font-family: 'Russo One', sans-serif; font-size: 20px; }
+    .logo-name span { color: var(--orange2); }
+    .logo-tiny { font-size: 10px; color: var(--grey); display: block; letter-spacing: .5px; margin-top: -3px; }
+
+    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .nav-links a { font-size: 14px; font-weight: 500; color: var(--grey); transition: color .2s; }
+    .nav-links a:hover { color: #fff; }
+
+    .nav-right { display: flex; align-items: center; gap: 16px; }
+    .nav-phone { font-family: 'Russo One', sans-serif; font-size: 17px; }
+
+    .burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; background: none; border: none; }
+    .burger span { display: block; width: 22px; height: 2px; background: #fff; border-radius: 2px; transition: .3s; }
+    .burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .burger.open span:nth-child(2) { opacity: 0; }
+    .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mob-nav {
+      display: none; position: fixed; top: 72px; left: 0; right: 0;
+      background: rgba(8,9,15,.98); backdrop-filter: blur(24px);
+      border-bottom: 1px solid var(--border); z-index: 899; padding: 24px;
+    }
+    .mob-nav.open { display: block; }
+    .mob-nav ul { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+    .mob-nav a { font-size: 17px; font-weight: 600; color: var(--grey); display: block; padding: 10px 0; transition: color .2s; border-bottom: 1px solid var(--border); }
+    .mob-nav a:hover { color: #fff; }
+    .mob-nav .btn { width: 100%; justify-content: center; margin-top: 16px; }
+
+    /* ====== HERO ====== */
+    .hero {
+      min-height: 100vh; display: flex; align-items: center;
+      padding-top: 72px; position: relative; overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 900px 700px at 65% 45%, rgba(255,77,0,.07) 0%, transparent 65%),
+        radial-gradient(ellipse 500px 400px at 10% 80%, rgba(255,178,0,.05) 0%, transparent 60%),
+        linear-gradient(160deg, #08090F 0%, #0D1120 50%, #08090F 100%);
+    }
+    .hero-lines {
+      position: absolute; inset: 0; opacity: .4;
+      background-image:
+        linear-gradient(rgba(255,255,255,.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.015) 1px, transparent 1px);
+      background-size: 64px 64px;
+    }
+    .hero-glow {
+      position: absolute; width: 600px; height: 600px;
+      border-radius: 50%; background: radial-gradient(circle, rgba(255,77,0,.12), transparent 70%);
+      top: 50%; right: 5%; transform: translateY(-50%); pointer-events: none;
+    }
+    .hero-in {
+      position: relative; z-index: 2; width: 100%;
+      display: grid; grid-template-columns: 1fr 440px; gap: 60px; align-items: center;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,77,0,.1); border: 1px solid rgba(255,77,0,.3);
+      padding: 8px 18px; border-radius: 100px; font-size: 12px; font-weight: 700;
+      color: var(--orange2); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px;
+    }
+    .hero-dot { width: 7px; height: 7px; background: var(--orange); border-radius: 50%; animation: blink 1.8s infinite; }
+    @keyframes blink { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:.4; transform:scale(1.4); } }
+
+    .hero-h1 { font-size: clamp(32px,4.5vw,60px); line-height: 1.07; margin-bottom: 20px; }
+    .hero-desc { font-size: 17px; color: var(--grey); max-width: 520px; margin-bottom: 36px; line-height: 1.75; }
+
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 48px; }
+
+    .hero-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+    .chip {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 8px 14px; border-radius: 100px; font-size: 13px; font-weight: 500;
+      background: rgba(255,255,255,.05); border: 1px solid var(--border); color: var(--grey);
+    }
+    .chip-icon { font-size: 15px; }
+
+    /* Hero Form */
+    .hero-form {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 20px; padding: 36px; position: relative;
+    }
+    .hero-form::before {
+      content: ''; position: absolute; top: 0; left: 36px; right: 36px;
+      height: 2px; background: var(--og); border-radius: 0 0 4px 4px;
+    }
+    .hf-title { font-family: 'Russo One', sans-serif; font-size: 20px; margin-bottom: 6px; }
+    .hf-sub { font-size: 13px; color: var(--grey); margin-bottom: 24px; }
+
+    .fg { margin-bottom: 14px; }
+    .fg label { display: block; font-size: 11px; font-weight: 700; color: var(--grey); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 7px; }
+    .fc {
+      width: 100%; background: rgba(255,255,255,.05); border: 1px solid var(--border);
+      border-radius: var(--rs); padding: 13px 15px; font-size: 14px; color: #fff;
+      font-family: 'Inter', sans-serif; outline: none; transition: border-color .2s, background .2s;
+    }
+    .fc::placeholder { color: var(--muted); }
+    .fc:focus { border-color: var(--orange); background: rgba(255,77,0,.05); }
+    select.fc {
+      cursor: pointer; appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237F8EA3' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px;
+    }
+    select.fc option { background: #111520; }
+    .privacy { font-size: 11px; color: var(--muted); margin-top: 10px; line-height: 1.6; }
+
+    /* ====== TICKER ====== */
+    .ticker { background: var(--og); padding: 14px 0; overflow: hidden; }
+    .ticker-inner { display: flex; gap: 60px; animation: tick 18s linear infinite; white-space: nowrap; width: max-content; }
+    .ticker-item { font-family: 'Russo One', sans-serif; font-size: 14px; letter-spacing: 1px; display: flex; align-items: center; gap: 12px; }
+    .ticker-item::before { content: '●'; font-size: 8px; opacity: .7; }
+    @keyframes tick { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+    /* ====== SERVICES ====== */
+    .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .svc-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--r); padding: 30px; transition: all .3s;
+      position: relative; overflow: hidden; display: flex; flex-direction: column;
+    }
+    .svc-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: var(--og); transform: scaleX(0); transition: transform .3s; transform-origin: left;
+    }
+    .svc-card:hover { border-color: var(--bord-o); transform: translateY(-4px); box-shadow: var(--shadow), var(--glow); }
+    .svc-card:hover::before { transform: scaleX(1); }
+    .svc-ico {
+      width: 54px; height: 54px; background: rgba(255,77,0,.1); border: 1px solid var(--bord-o);
+      border-radius: 12px; display: flex; align-items: center; justify-content: center;
+      font-size: 26px; margin-bottom: 18px; transition: background .3s;
+    }
+    .svc-card:hover .svc-ico { background: rgba(255,77,0,.2); }
+    .svc-h3   { font-size: 17px; margin-bottom: 10px; }
+    .svc-desc { font-size: 13px; color: var(--grey); line-height: 1.7; margin-bottom: 18px; flex: 1; }
+    .svc-meta {
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      padding: 12px 0; margin-bottom: 18px; display: flex; flex-direction: column; gap: 6px;
+    }
+    .svc-row { display: flex; justify-content: space-between; font-size: 12px; }
+    .svc-row span:first-child { color: var(--grey); }
+    .svc-row span:last-child  { font-weight: 600; }
+    .svc-price { font-family: 'Bebas Neue', sans-serif; font-size: 34px; color: var(--orange2); margin-bottom: 14px; }
+    .svc-btns  { display: flex; gap: 8px; }
+    .cta-row   { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 32px; }
+
+    /* ====== PRICING ====== */
+    .price-factors {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 44px;
+    }
+    .pf {
+      display: flex; align-items: flex-start; gap: 10px; padding: 14px;
+      background: var(--card); border: 1px solid var(--border); border-radius: var(--rs);
+    }
+    .pf-dot { width: 8px; height: 8px; background: var(--orange); border-radius: 50%; margin-top: 5px; flex-shrink: 0; }
+    .pf span { font-size: 13px; color: var(--grey); line-height: 1.5; }
+
+    .pt {
+      width: 100%; border-collapse: separate; border-spacing: 0;
+      background: var(--card); border-radius: var(--r); overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .pt thead { background: rgba(255,77,0,.07); }
+    .pt th { padding: 14px 22px; text-align: left; font-size: 12px; font-weight: 700; color: var(--grey); text-transform: uppercase; letter-spacing: .5px; border-bottom: 1px solid var(--border); }
+    .pt td { padding: 16px 22px; font-size: 14px; border-bottom: 1px solid var(--border); transition: background .2s; }
+    .pt tr:last-child td { border-bottom: none; }
+    .pt tr:hover td { background: rgba(255,255,255,.02); }
+    .pt-price { font-family: 'Bebas Neue', sans-serif; font-size: 26px; color: var(--orange2); }
+    .pt-note  { font-size: 12px; color: var(--grey); }
+
+    /* ====== CALCULATOR ====== */
+    .calc-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+    .calc-form { background: var(--card); border: 1px solid var(--border); border-radius: var(--r); padding: 40px; }
+    .calc-res  { position: sticky; top: 96px; }
+    .res-card {
+      background: var(--card); border: 1px solid var(--bord-o); border-radius: var(--r); padding: 40px;
+      text-align: center; position: relative; overflow: hidden;
+    }
+    .res-card::after {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(255,77,0,.1), transparent 60%);
+      pointer-events: none;
+    }
+    .res-label { font-size: 13px; color: var(--grey); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+    .res-amount { font-family: 'Bebas Neue', sans-serif; font-size: 88px; color: var(--orange2); line-height: 1; }
+    .res-note   { font-size: 13px; color: var(--grey); margin-bottom: 28px; }
+    .res-chips  { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 28px; }
+    .rchip {
+      background: rgba(255,77,0,.1); border: 1px solid var(--bord-o);
+      color: var(--orange2); padding: 5px 12px; border-radius: 100px; font-size: 12px; font-weight: 600;
+      display: none;
+    }
+    .rchip.show { display: block; }
+
+    /* ====== ADVANTAGES ====== */
+    .adv-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .adv-card {
+      padding: 28px 22px; background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--r); transition: all .3s; position: relative;
+    }
+    .adv-card:hover { border-color: var(--bord-o); transform: translateY(-3px); box-shadow: var(--glow); }
+    .adv-bg {
+      font-family: 'Bebas Neue', sans-serif; font-size: 80px; color: rgba(255,77,0,.06);
+      position: absolute; top: 10px; right: 14px; line-height: 1; pointer-events: none;
+    }
+    .adv-ico   { font-size: 34px; margin-bottom: 14px; display: block; }
+    .adv-title { font-family: 'Russo One', sans-serif; font-size: 15px; margin-bottom: 8px; }
+    .adv-text  { font-size: 13px; color: var(--grey); line-height: 1.65; }
+
+    /* ====== HOW WE WORK ====== */
+    .steps-row { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0; position: relative; }
+    .steps-row::before {
+      content: ''; position: absolute; top: 40px; left: 8.3%; right: 8.3%;
+      height: 2px; background: linear-gradient(90deg, var(--orange), var(--yellow), var(--teal));
+    }
+    .step {
+      text-align: center; padding: 0 12px; position: relative; z-index: 1;
+    }
+    .step-n {
+      width: 48px; height: 48px; border-radius: 50%; background: var(--og);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Russo One', sans-serif; font-size: 18px;
+      margin: 0 auto 18px; box-shadow: 0 6px 24px rgba(255,77,0,.35);
+    }
+    .step-t { font-family: 'Russo One', sans-serif; font-size: 13px; margin-bottom: 6px; }
+    .step-d { font-size: 12px; color: var(--grey); line-height: 1.5; }
+
+    /* ====== B2B BLOCK ====== */
+    .b2b {
+      background: linear-gradient(135deg, #0a0e1c, #0e1428);
+      border: 1px solid rgba(255,178,0,.22); border-radius: var(--r);
+      padding: 26px 30px; display: flex; align-items: center; gap: 26px;
+      position: relative; overflow: hidden; max-width: 720px; margin: 0 auto;
+    }
+    .b2b-ico  { font-size: 40px; flex-shrink: 0; }
+    .b2b-t    { font-family: 'Russo One', sans-serif; font-size: 18px; color: var(--yellow); margin-bottom: 8px; }
+    .b2b-d    { font-size: 13px; color: var(--grey); margin-bottom: 14px; }
+    .b2b-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+    .b2b-tag  { background: rgba(255,178,0,.1); border: 1px solid rgba(255,178,0,.2); color: var(--yellow); padding: 5px 14px; border-radius: 100px; font-size: 12px; font-weight: 600; }
+
+    /* ====== ICONS ====== */
+    .ico {
+      width: 1em; height: 1em; display: inline-block; vertical-align: -0.15em;
+      fill: none; stroke: var(--orange2); stroke-width: 1.8;
+      stroke-linecap: round; stroke-linejoin: round;
+      filter: drop-shadow(0 0 4px rgba(255,110,26,.65));
+      flex-shrink: 0;
+    }
+    .ico-teal { stroke: var(--teal); filter: drop-shadow(0 0 4px rgba(0,212,163,.55)); }
+    /* иконки на сплошной оранжевой/жёлтой заливке — иначе не видны на фоне того же цвета */
+    .btn-p .ico, .sb-call .ico, .logo-sq .ico { stroke: #fff; filter: drop-shadow(0 0 2px rgba(0,0,0,.35)); }
+    .btn-y .ico { stroke: #000; filter: none; }
+
+    /* ====== LEAD POPUP ====== */
+    .lead-popup {
+      position: fixed; right: 24px; bottom: 24px; z-index: 950;
+      width: 300px; background: var(--card); border: 1px solid var(--bord-o);
+      border-radius: var(--r); padding: 22px 22px 20px;
+      box-shadow: var(--shadow), var(--glow);
+      opacity: 0; transform: translateY(20px) scale(.98); pointer-events: none;
+      transition: opacity .35s ease, transform .35s ease;
+    }
+    .lead-popup.show { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
+    .lp-close {
+      position: absolute; top: 10px; right: 10px; width: 26px; height: 26px;
+      border-radius: 50%; border: 1px solid var(--border); background: transparent;
+      color: var(--grey); font-size: 16px; line-height: 1; cursor: pointer;
+    }
+    .lp-close:hover { color: #fff; border-color: var(--bord-o); }
+    .lp-ico { margin-bottom: 10px; }
+    .lp-ico .ico { width: 30px; height: 30px; }
+    .lp-t { font-family: 'Russo One', sans-serif; font-size: 16px; color: var(--orange2); margin-bottom: 8px; }
+    .lp-d { font-size: 13px; color: var(--grey); line-height: 1.6; margin-bottom: 14px; }
+    .lp-ph { font-family: 'Bebas Neue', sans-serif; font-size: 30px; color: #fff; display: block; margin-bottom: 12px; }
+    @media (max-width: 640px) {
+      .lead-popup { left: 16px; right: 16px; bottom: 96px; width: auto; }
+    }
+
+    /* ====== TRUST ====== */
+    .trust-nums { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-bottom: 56px; max-width: 760px; margin-left: auto; margin-right: auto; }
+    .tn {
+      text-align: center; padding: 30px 16px; background: var(--card);
+      border: 1px solid var(--border); border-radius: var(--r);
+    }
+    .tn-n     { font-family: 'Bebas Neue', sans-serif; font-size: 64px; color: var(--orange2); line-height: 1; }
+    .tn-l     { font-size: 13px; color: var(--grey); margin-top: 4px; }
+    .reviews  { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+    .rv {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--r); padding: 26px;
+    }
+    .rv-top   { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+    .rv-av    { width: 42px; height: 42px; background: var(--og); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Russo One', sans-serif; font-size: 17px; flex-shrink: 0; }
+    .rv-name  { font-weight: 700; font-size: 14px; }
+    .rv-src   { font-size: 11px; color: var(--grey); }
+    .rv-stars { color: var(--yellow); font-size: 14px; margin-bottom: 10px; letter-spacing: 2px; }
+    .rv-text  { font-size: 13px; color: var(--grey); line-height: 1.7; }
+
+    /* ====== FAQ ====== */
+    .faq-wrap { max-width: 860px; margin: 0 auto; }
+    .faq-item {
+      border: 1px solid var(--border); border-radius: var(--rs);
+      margin-bottom: 8px; overflow: hidden; transition: border-color .2s;
+    }
+    .faq-item.open { border-color: var(--bord-o); }
+    .faq-q {
+      padding: 18px 22px; cursor: pointer; display: flex; align-items: center;
+      justify-content: space-between; gap: 16px; font-size: 15px; font-weight: 600;
+      background: var(--card); transition: background .2s; user-select: none;
+    }
+    .faq-q:hover { background: var(--cardh); }
+    .faq-arr {
+      width: 26px; height: 26px; border: 1px solid var(--border); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+      transition: all .28s; color: var(--grey); font-size: 12px;
+    }
+    .faq-item.open .faq-arr { transform: rotate(180deg); border-color: var(--orange); background: var(--orange); color: #fff; }
+    .faq-a {
+      display: none; padding: 0 22px 18px; font-size: 14px;
+      color: var(--grey); line-height: 1.8; background: var(--card);
+    }
+    .faq-item.open .faq-a { display: block; }
+
+    /* ====== CONTACTS ====== */
+    .ctc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+    .ctc-ph { font-family: 'Bebas Neue', sans-serif; font-size: 54px; color: #fff; display: block; margin-bottom: 4px; line-height: 1; }
+    .ctc-ph-sub { font-size: 13px; color: var(--grey); margin-bottom: 28px; }
+    .ctc-methods { display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
+    .ctc-item {
+      display: flex; align-items: center; gap: 14px; padding: 18px 20px;
+      background: var(--card); border: 1px solid var(--border); border-radius: var(--rs);
+      transition: border-color .2s; text-decoration: none; color: inherit;
+    }
+    .ctc-item:hover { border-color: var(--bord-o); }
+    .ctc-icon { width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+    .ci-wa  { background: rgba(37,211,102,.1); }
+    .ci-tg  { background: rgba(0,136,204,.1); }
+    .ci-av  { background: rgba(0,196,130,.1); }
+    .ci-em  { background: rgba(255,178,0,.1); }
+    .ctc-lbl  { font-size: 11px; color: var(--grey); text-transform: uppercase; letter-spacing: .5px; }
+    .ctc-val  { font-size: 15px; font-weight: 600; }
+    .wh-box {
+      background: var(--card); border: 1px solid var(--border); border-radius: var(--r);
+      padding: 28px 32px;
+    }
+    .wh-24   { font-family: 'Bebas Neue', sans-serif; font-size: 72px; color: var(--teal); line-height: 1; }
+    .wh-sub  { font-size: 14px; color: var(--grey); }
+    .ctc-form-wrap { background: var(--card); border: 1px solid var(--border); border-radius: var(--r); padding: 36px; margin-top: 28px; }
+    .ctc-f-title { font-family: 'Russo One', sans-serif; font-size: 18px; margin-bottom: 4px; }
+    .ctc-f-sub   { font-size: 13px; color: var(--grey); margin-bottom: 24px; }
+
+    /* ====== MOBILE STICKY BAR ====== */
+    .sb {
+      display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(8,9,15,.96); backdrop-filter: blur(20px);
+      border-top: 1px solid var(--border);
+      padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+    }
+    .sb-row { display: grid; grid-template-columns: repeat(4,1fr); gap: 8px; }
+    .sb-btn {
+      display: flex; flex-direction: column; align-items: center; gap: 3px;
+      padding: 8px 4px; border-radius: var(--rs); font-size: 10px; font-weight: 700;
+      cursor: pointer; border: none; text-decoration: none; transition: all .2s;
+    }
+    .sb-ico  { font-size: 20px; }
+    .sb-call { background: var(--og); color: #fff; }
+    .sb-wa   { background: rgba(37,211,102,.12); color: #25D366; border: 1px solid rgba(37,211,102,.2); }
+    .sb-tg   { background: rgba(0,136,204,.12); color: #0088CC; border: 1px solid rgba(0,136,204,.2); }
+    .sb-av   { background: rgba(0,196,130,.12); color: #00C482; border: 1px solid rgba(0,196,130,.2); }
+
+    /* ====== FOOTER ====== */
+    .footer { background: #060810; border-top: 1px solid var(--border); padding: 64px 0 32px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; margin-bottom: 48px; }
+    .ft-desc    { font-size: 13px; color: var(--grey); line-height: 1.75; max-width: 240px; margin-top: 14px; }
+    .ft-col-t   { font-size: 12px; font-weight: 700; color: var(--grey); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 18px; }
+    .ft-links   { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .ft-links a { font-size: 13px; color: var(--muted); transition: color .2s; }
+    .ft-links a:hover { color: #fff; }
+    .footer-bot {
+      border-top: 1px solid var(--border); padding-top: 24px;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;
+    }
+    .ft-copy { font-size: 12px; color: var(--muted); }
+
+    /* ====== SCROLL FADE ====== */
+    .sf { opacity: 0; transform: translateY(28px); transition: opacity .65s ease, transform .65s ease; }
+    .sf.in { opacity: 1; transform: translateY(0); }
+
+    /* ====== DIVIDER LINE ====== */
+    .div-line { height: 1px; background: linear-gradient(90deg, transparent, var(--border), transparent); }
+
+    /* ====== RESPONSIVE ====== */
+    @media (max-width: 1100px) {
+      .adv-grid    { grid-template-columns: repeat(2,1fr); }
+      .trust-nums  { grid-template-columns: repeat(2,1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+      .steps-row   { grid-template-columns: repeat(3,1fr); }
+      .steps-row::before { display: none; }
+    }
+    @media (max-width: 900px) {
+      .hero-in     { grid-template-columns: 1fr; }
+      .hero-form   { max-width: 480px; }
+      .svc-grid    { grid-template-columns: repeat(2,1fr); }
+      .calc-wrap   { grid-template-columns: 1fr; }
+      .calc-res    { position: static; }
+      .ctc-grid    { grid-template-columns: 1fr; }
+      .reviews     { grid-template-columns: 1fr; }
+      .price-factors { grid-template-columns: repeat(2,1fr); }
+      .b2b         { flex-direction: column; padding: 24px; gap: 16px; }
+    }
+    @media (max-width: 640px) {
+      .section     { padding: 60px 0; }
+      .svc-grid    { grid-template-columns: 1fr; }
+      .trust-nums  { grid-template-columns: repeat(2,1fr); }
+      .adv-grid    { grid-template-columns: repeat(2,1fr); }
+      .steps-row   { grid-template-columns: repeat(2,1fr); }
+      .price-factors { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 36px; }
+      .nav-links, .nav-right { display: none; }
+      .burger      { display: flex; }
+      .sb          { display: block; }
+      body         { padding-bottom: 80px; }
+      .hero-ctas   { flex-direction: column; }
+      .hero-ctas .btn { width: 100%; justify-content: center; }
+      .pt          { font-size: 12px; }
+      .pt th, .pt td { padding: 12px 14px; }
+      .btn         { white-space: normal; max-width: 100%; text-align: center; width: 100%; justify-content: center; }
+      .svc-btns    { flex-direction: column; }
+      .cta-row     { flex-direction: column; }
+      .b2b-tags    { justify-content: center; }
+      /* заголовки блоков — по центру, как "Почему мы" */
+      .section-header { text-align: center; }
+      .section-header .s-sub { margin-left: auto; margin-right: auto; }
+    }
+    @media (max-width: 460px) {
+      .adv-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<svg style="display:none" aria-hidden="true">
+  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 16V7a1 1 0 0 1 1-1h9v10"/><path d="M12 10h4l4 3.5V16"/><circle cx="7" cy="18" r="1.6"/><circle cx="16.5" cy="18" r="1.6"/><path d="M2 16h2M9.5 18h5.4M18.1 18H20a1 1 0 0 0 1-1v-2.2"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path d="M3 16l1.5-5.2A2 2 0 0 1 6.4 9.5h11.2a2 2 0 0 1 1.9 1.3L21 16"/><path d="M3 16h18v2a1 1 0 0 1-1 1h-1.5a1 1 0 0 1-1-1v-.5H6.5V18a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-2Z"/><circle cx="7" cy="17" r="1.4"/><circle cx="17" cy="17" r="1.4"/></symbol>
+  <symbol id="i-jeep" viewBox="0 0 24 24"><path d="M4 16l1-6a2 2 0 0 1 2-1.6h10a2 2 0 0 1 2 1.6l1 6"/><path d="M3 16h18v2a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-.5H6V18a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-2Z"/><path d="M6 12h12"/><circle cx="7.2" cy="17" r="1.3"/><circle cx="16.8" cy="17" r="1.3"/></symbol>
+  <symbol id="i-van" viewBox="0 0 24 24"><rect x="3" y="7" width="14" height="9" rx="1.5"/><path d="M17 10h2.5L21 13v3h-4"/><circle cx="7" cy="18" r="1.4"/><circle cx="17" cy="18" r="1.4"/><path d="M3 12h14"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5 2.5 20h19L12 3.5Z"/><path d="M12 9.5v4.2"/><path d="M12 16.3v.05"/></symbol>
+  <symbol id="i-parking" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 16V8h3.2a2.6 2.6 0 0 1 0 5.2H9.5"/></symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 4.9L3 17.5 5.5 20l6.3-6.3a4 4 0 0 0 4.9-5.4l-2.6 2.6-2-2 2.6-2.6Z"/></symbol>
+  <symbol id="i-driver" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.2"/><path d="M12 4v5.8M6.3 15.8l4.9-2.3M17.7 15.8l-4.9-2.3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3.3 2"/></symbol>
+  <symbol id="i-money" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M9.5 8h3a2.6 2.6 0 0 1 0 5.2H9.5V8Zm0 5.2V16M8 11h1.5M8 13.2h4"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3.5 19 6v5.5c0 4.6-3 7.6-7 9-4-1.4-7-4.4-7-9V6l7-2.5Z"/></symbol>
+  <symbol id="i-clipboard" viewBox="0 0 24 24"><rect x="5" y="4.5" width="14" height="16" rx="1.6"/><rect x="8.5" y="3" width="7" height="3" rx="1"/><path d="M8.5 11h7M8.5 14.5h7M8.5 18h4"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="9" rx="1.6"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3.5h7l4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-16a1 1 0 0 1 1-1Z"/><path d="M14 3.5V8h4M9 12.5h6M9 15.8h6"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><rect x="4" y="4" width="10" height="16" rx="1"/><path d="M14 9h6v11h-6"/><path d="M7 7.5h1M10.5 7.5h1M7 11h1M10.5 11h1M7 14.5h1M10.5 14.5h1"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2.5 4.5 14h6l-1 7.5L19.5 10h-6l-.5-7.5Z"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V6M16 20v-7M4 20h16"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5.5h16v10.5H9l-4 3.5v-3.5H4V5.5Z"/><path d="M8 9.5h8M8 12.5h5"/></symbol>
+  <symbol id="i-plane" viewBox="0 0 24 24"><path d="M3 12 20.5 4 16 20l-5-5.5L3 12Z"/><path d="M11 14.5 20.5 4"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path d="M11.5 3.5H5v6.5L14 19l6.5-6.5-9-9Z"/><circle cx="8.2" cy="7.2" r="1.1"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="1.6"/><path d="M4 6.5l8 6.5 8-6.5"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-6.2-6.5-11A6.5 6.5 0 0 1 18.5 10c0 4.8-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.2"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.5 3.5c.4 1.6.9 3 1.7 4.3a1 1 0 0 1-.2 1.3L6.6 10.4a12.5 12.5 0 0 0 7 7l1.3-1.4a1 1 0 0 1 1.3-.2c1.3.8 2.7 1.3 4.3 1.7a1 1 0 0 1 .8 1v3a1 1 0 0 1-1.1 1C10.8 21.9 2.1 13.2 1.5 3.8a1 1 0 0 1 1-1.1h3a1 1 0 0 1 1 .8Z"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6"/></symbol>
+</svg>
+
+<!-- ====== NAVIGATION ====== -->
+<nav class="nav" id="nav">
+  <div class="nav-in">
+    <a href="#" class="logo">
+      <div class="logo-sq"><svg class="ico"><use href="#i-truck"></use></svg></div>
+      <div>
+        <div class="logo-name">Москва<span>Эвак</span></div>
+        <span class="logo-tiny">Эвакуатор 24/7</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Услуги</a></li>
+      <li><a href="#pricing">Цены</a></li>
+      <li><a href="#calc">Калькулятор</a></li>
+      <li><a href="#howwork">Как мы работаем</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="tel:+79060204404" class="nav-phone">+7 906 020-44-04</a>
+      <a href="tel:+79060204404" class="btn btn-p btn-sm">Вызвать</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mob-nav" id="mobnav">
+  <ul>
+    <li><a href="#services" onclick="closeMob()">Услуги</a></li>
+    <li><a href="#pricing" onclick="closeMob()">Цены</a></li>
+    <li><a href="#calc" onclick="closeMob()">Калькулятор</a></li>
+    <li><a href="#howwork" onclick="closeMob()">Как мы работаем</a></li>
+    <li><a href="#faq" onclick="closeMob()">FAQ</a></li>
+    <li><a href="#contacts" onclick="closeMob()">Контакты</a></li>
+  </ul>
+  <a href="tel:+79060204404" class="btn btn-p" style="margin-top:16px;width:100%;justify-content:center;"><svg class="ico"><use href="#i-phone"></use></svg> +7 906 020-44-04</a>
+</div>
+
+<!-- ====== HERO ====== -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-lines"></div>
+  <div class="hero-glow"></div>
+  <div class="container">
+    <div class="hero-in">
+      <div>
+        <div class="hero-badge">
+          <span class="hero-dot"></span>
+          Работаем прямо сейчас — 24/7
+        </div>
+        <h1 class="hero-h1">
+          Эвакуатор в Москве<br>
+          и Подмосковье —<br>
+          <span class="text-o">от 30 минут</span>
+        </h1>
+        <p class="hero-desc">
+          Вывозим легковые авто, внедорожники, микроавтобусы и лёгкие грузовики до 3,5 т.
+          Фиксированные цены, работа по договору.
+        </p>
+        <div class="hero-ctas">
+          <a href="#services" class="btn btn-p btn-lg"><svg class="ico"><use href="#i-truck"></use></svg> Подобрать эвакуатор</a>
+          <a href="#calc" class="btn btn-o btn-lg"><svg class="ico"><use href="#i-chart"></use></svg> Рассчитать стоимость</a>
+          <a href="tel:+79060204404" class="btn btn-g btn-lg"><svg class="ico"><use href="#i-phone"></use></svg> Позвонить</a>
+        </div>
+        <div class="hero-chips">
+          <span class="chip"><span class="chip-icon"><svg class="ico"><use href="#i-bolt"></use></svg></span>Подача от 30 мин</span>
+          <span class="chip"><span class="chip-icon"><svg class="ico"><use href="#i-lock"></use></svg></span>Фиксированная цена</span>
+          <span class="chip"><span class="chip-icon"><svg class="ico"><use href="#i-doc"></use></svg></span>Работаем по договору</span>
+          </div>
+      </div>
+
+      <div class="hero-form" id="hero-form">
+        <div class="hf-title">Быстрый расчёт стоимости</div>
+        <div class="hf-sub">Перезвоним за 5 минут с точной ценой</div>
+        <form onsubmit="submitForm(event,'hero-form')">
+          <div class="fg">
+            <label>Тип транспортного средства</label>
+            <select class="fc" name="vehicle">
+              <option value="">— Выберите тип —</option>
+              <option value="legkovoy">Легковой автомобиль</option>
+              <option value="vnedorozhnik">Внедорожник / Джип</option>
+              <option value="mikroavtobus">Микроавтобус</option>
+              <option value="gruzovoy">Грузовик до 3,5 т</option>
+              <option value="dtp">Автомобиль после ДТП</option>
+              <option value="other">Другое</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label>Зона подачи</label>
+            <select class="fc" name="zone">
+              <option value="">— Выберите зону —</option>
+              <option value="msk">Москва (внутри МКАД)</option>
+              <option value="mkad">МКАД</option>
+              <option value="oblast">Московская область</option>
+              <option value="dalnij">Другой город — до 700 км от Москвы</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label>Имя *</label>
+            <input type="text" class="fc" name="name" id="hero-name" placeholder="Ваше имя" required>
+          </div>
+          <div class="fg">
+            <label>Телефон *</label>
+            <input type="tel" class="fc" name="phone" placeholder="+7 (___) ___-__-__" required id="hero-phone">
+          </div>
+          <button type="submit" class="btn btn-p" style="width:100%;justify-content:center;padding:16px;">
+            <svg class="ico"><use href="#i-truck"></use></svg> Рассчитать стоимость и вызвать эвакуатор
+          </button>
+          <p class="privacy">Нажимая кнопку, вы даёте согласие на обработку персональных данных. Данные не передаются третьим лицам.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker">
+  <div class="ticker-inner" id="ticker">
+    <span class="ticker-item">Подача от 30 минут по Москве и МКАД</span>
+    <span class="ticker-item">Работаем 24/7 без выходных и праздников</span>
+    <span class="ticker-item">Фиксированные цены — без скрытых доплат</span>
+    <span class="ticker-item">Эвакуация легковых, внедорожников, микроавтобусов, грузовиков до 3,5 т</span>
+    <span class="ticker-item">Работаем с юрлицами: договор, акт, счёт</span>
+    <span class="ticker-item">Вывоз после ДТП — полная погрузка, бережная транспортировка</span>
+    <!-- duplicate for seamless loop -->
+    <span class="ticker-item">Подача от 30 минут по Москве и МКАД</span>
+    <span class="ticker-item">Работаем 24/7 без выходных и праздников</span>
+    <span class="ticker-item">Фиксированные цены — без скрытых доплат</span>
+    <span class="ticker-item">Эвакуация легковых, внедорожников, микроавтобусов, грузовиков до 3,5 т</span>
+    <span class="ticker-item">Работаем с юрлицами: договор, акт, счёт</span>
+    <span class="ticker-item">Вывоз после ДТП — полная погрузка, бережная транспортировка</span>
+  </div>
+</div>
+
+<!-- ====== SERVICES ====== -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-header sf">
+      <div class="s-tag">Услуги</div>
+      <h2 class="s-title">Услуги эвакуатора в Москве и области</h2>
+      <p class="s-sub">Любой тип транспорта, любая сложность погрузки. Работаем круглосуточно.</p>
+    </div>
+    <div class="svc-grid">
+
+      <div class="svc-card sf">
+        <div class="svc-ico"><svg class="ico"><use href="#i-car"></use></svg></div>
+        <h3 class="svc-h3">Эвакуация легкового автомобиля</h3>
+        <p class="svc-desc">Бережная полная погрузка седана, хэтчбека, компактного кроссовера. Подъём задним гидроподъёмником или полная погрузка на платформу.</p>
+        <div class="svc-meta">
+          <div class="svc-row"><span>Минимальный заказ</span><span>1 смена (2 часа)</span></div>
+          <div class="svc-row"><span>Экипаж</span><span>Водитель + оператор</span></div>
+          <div class="svc-row"><span>Тип погрузки</span><span>Гидроподъёмник / платформа</span></div>
+        </div>
+        <div class="svc-price">от 2 500 ₽</div>
+        <div class="svc-btns">
+          <a href="tel:+79060204404" class="btn btn-p btn-sm">Заказать</a>
+          <a href="#calc" class="btn btn-o btn-sm">Рассчитать</a>
+        </div>
+      </div>
+
+      <div class="svc-card sf">
+        <div class="svc-ico"><svg class="ico"><use href="#i-jeep"></use></svg></div>
+        <h3 class="svc-h3">Эвакуация внедорожника и джипа</h3>
+        <p class="svc-desc">Эвакуация джипов, больших кроссоверов до 2,5 т. Мощная платформа, надёжная фиксация, погрузка без повреждения бамперов и подвески.</p>
+        <div class="svc-meta">
+          <div class="svc-row"><span>Минимальный заказ</span><span>1 смена (2 часа)</span></div>
+          <div class="svc-row"><span>Экипаж</span><span>Водитель + оператор</span></div>
+          <div class="svc-row"><span>Грузоподъёмность</span><span>до 2,5 т</span></div>
+        </div>
+        <div class="svc-price">от 3 000 ₽</div>
+        <div class="svc-btns">
+          <a href="tel:+79060204404" class="btn btn-p btn-sm">Заказать</a>
+          <a href="#calc" class="btn btn-o btn-sm">Рассчитать</a>
+        </div>
+      </div>
+
+      <div class="svc-card sf">
+        <div class="svc-ico"><svg class="ico"><use href="#i-van"></use></svg></div>
+        <h3 class="svc-h3">Эвакуация микроавтобуса</h3>
+        <p class="svc-desc">Перевозка пассажирских и грузовых микроавтобусов до 3,5 т. Удобная погрузка, фиксация ремнями, работа в центре Москвы и на МКАД.</p>
+        <div class="svc-meta">
+          <div class="svc-row"><span>Минимальный заказ</span><span>1 смена (2 часа)</span></div>
+          <div class="svc-row"><span>Экипаж</span><span>Водитель + оператор</span></div>
+          <div class="svc-row"><span>Грузоподъёмность</span><span>до 3,5 т</span></div>
+        </div>
+        <div class="svc-price">от 3 500 ₽</div>
+        <div class="svc-btns">
+          <a href="tel:+79060204404" class="btn btn-p btn-sm">Заказать</a>
+          <a href="#calc" class="btn btn-o btn-sm">Рассчитать</a>
+        </div>
+      </div>
+
+      <div class="svc-card sf">
+        <div class="svc-ico"><svg class="ico"><use href="#i-truck"></use></svg></div>
+        <h3 class="svc-h3">Эвакуация лёгкого грузовика (до 3,5 т)</h3>
+        <p class="svc-desc">Эвакуация фургонов, газелей, небольших грузовиков. Полная погрузка на платформу, перевозка по Москве и области без ограничений.</p>
+        <div class="svc-meta">
+          <div class="svc-row"><span>Минимальный заказ</span><span>1 смена (2 часа)</span></div>
+          <div class="svc-row"><span>Экипаж</span><span>Водитель + оператор</span></div>
+          <div class="svc-row"><span>Грузоподъёмность</span><span>до 3,5 т</span></div>
+        </div>
+        <div class="svc-price">от 3 500 ₽</div>
+        <div class="svc-btns">
+          <a href="tel:+79060204404" class="btn btn-p btn-sm">Заказать</a>
+          <a href="#calc" class="btn btn-o btn-sm">Рассчитать</a>
+        </div>
+      </div>
+
+      <div class="svc-card sf">
+        <div class="svc-ico"><svg class="ico"><use href="#i-alert"></use></svg></div>
+        <h3 class="svc-h3">Эвакуация автомобиля после ДТП</h3>
+        <p class="svc-desc">Эвакуация после аварии: с заблокированными колёсами, повреждённой подвеской, неработающей рулевой. Полная погрузка, доставка до СТО клиента.</p>
+        <div class="svc-meta">
+          <div class="svc-row"><span>Минимальный заказ</span><span>1 смена (2 часа)</span></div>
+          <div class="svc-row"><span>Экипаж</span><span>Водитель + оператор с опытом ДТП</span></div>
+          <div class="svc-row"><span>Тип погрузки</span><span>Полная погрузка на платформу</span></div>
+        </div>
+        <div class="svc-price">от 3 500 ₽</div>
+        <div class="svc-btns">
+          <a href="tel:+79060204404" class="btn btn-p btn-sm">Вызвать срочно</a>
+          <a href="#calc" class="btn btn-o btn-sm">Рассчитать</a>
+        </div>
+      </div>
+
+      <div class="svc-card sf">
+        <div class="svc-ico"><svg class="ico"><use href="#i-parking"></use></svg></div>
+        <h3 class="svc-h3">Эвакуация с парковки и из двора</h3>
+        <p class="svc-desc">Вывоз с паркингов, узких дворов, подземных стоянок. Без повреждения асфальта и прилегающих автомобилей. Работаем в любой части города.</p>
+        <div class="svc-meta">
+          <div class="svc-row"><span>Минимальный заказ</span><span>1 смена (2 часа)</span></div>
+          <div class="svc-row"><span>Экипаж</span><span>Водитель + оператор</span></div>
+          <div class="svc-row"><span>Особенность</span><span>Без повреждения асфальта</span></div>
+        </div>
+        <div class="svc-price">от 3 000 ₽</div>
+        <div class="svc-btns">
+          <a href="tel:+79060204404" class="btn btn-p btn-sm">Заказать</a>
+          <a href="#calc" class="btn btn-o btn-sm">Рассчитать</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====== PRICING ====== -->
+<section class="section section-alt" id="pricing">
+  <div class="container">
+    <div class="section-header sf">
+      <div class="s-tag">Тарифы</div>
+      <h2 class="s-title">Цены на эвакуатор в Москве и области</h2>
+      <p class="s-sub">Итоговая стоимость зависит от нескольких факторов. Менеджер назовёт точную цену за 1 минуту.</p>
+    </div>
+
+    <div class="price-factors sf">
+      <div class="pf"><div class="pf-dot"></div><span>Тип транспортного средства (легковой, внедорожник, микроавтобус, грузовик)</span></div>
+      <div class="pf"><div class="pf-dot"></div><span>Расстояние (по Москве, МКАД, Московская область)</span></div>
+      <div class="pf"><div class="pf-dot"></div><span>Срочность подачи (обычная / срочная эвакуация)</span></div>
+      <div class="pf"><div class="pf-dot"></div><span>Время суток (день / ночь 23:00–06:00)</span></div>
+      <div class="pf"><div class="pf-dot"></div><span>Сложность погрузки (ДТП, блокировка колёс, узкий двор)</span></div>
+          </div>
+
+    <table class="pt sf">
+      <thead>
+        <tr>
+          <th>Услуга</th>
+          <th>Цена от</th>
+          <th>Примечание</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Эвакуатор легкового авто по Москве</td>
+          <td><span class="pt-price">2 500 ₽</span></td>
+          <td class="pt-note">Мин. 2 часа</td>
+        </tr>
+        <tr>
+          <td>Эвакуатор внедорожника / джипа</td>
+          <td><span class="pt-price">3 000 ₽</span></td>
+          <td class="pt-note">Мин. 2 часа</td>
+        </tr>
+        <tr>
+          <td>Эвакуатор микроавтобуса</td>
+          <td><span class="pt-price">3 500 ₽</span></td>
+          <td class="pt-note">Мин. 2 часа</td>
+        </tr>
+        <tr>
+          <td>Эвакуатор грузовика до 3,5 т</td>
+          <td><span class="pt-price">3 500 ₽</span></td>
+          <td class="pt-note">Мин. 2 часа</td>
+        </tr>
+        <tr>
+          <td>Эвакуация после ДТП</td>
+          <td><span class="pt-price">3 500 ₽</span></td>
+          <td class="pt-note">Полная погрузка</td>
+        </tr>
+        <tr>
+          <td>Подача за МКАД</td>
+          <td><span class="pt-price">+50 ₽/км</span></td>
+          <td class="pt-note">От кольца</td>
+        </tr>
+        <tr>
+          <td>Ночная работа (23:00–06:00)</td>
+          <td><span class="pt-price">+20%</span></td>
+          <td class="pt-note">К базовой стоимости</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="cta-row sf">
+      <a href="#calc" class="btn btn-p btn-lg"><svg class="ico"><use href="#i-chart"></use></svg> Рассчитать точную стоимость</a>
+      <a href="tel:+79060204404" class="btn btn-o btn-lg"><svg class="ico"><use href="#i-phone"></use></svg> Позвонить</a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CALCULATOR ====== -->
+<section class="section" id="calc">
+  <div class="container">
+    <div class="section-header sf">
+      <div class="s-tag">Калькулятор</div>
+      <h2 class="s-title">Рассчитайте стоимость за 1 минуту</h2>
+      <p class="s-sub">Укажите тип авто, зону и срочность — получите ориентировочную стоимость и звонок менеджера в течение 5 минут.</p>
+    </div>
+    <div class="calc-wrap">
+      <div class="calc-form sf">
+        <form onsubmit="submitForm(event,'calc-form')">
+          <div class="fg">
+            <label>Тип транспортного средства *</label>
+            <select class="fc" id="calc-v" onchange="calcUpdate()" required>
+              <option value="">— Выберите тип —</option>
+              <option value="2500">Легковой автомобиль — от 2 500 ₽</option>
+              <option value="3000">Внедорожник / Джип — от 3 000 ₽</option>
+              <option value="3500">Микроавтобус — от 3 500 ₽</option>
+              <option value="3500">Грузовик до 3,5 т — от 3 500 ₽</option>
+              <option value="3500">Авто после ДТП — от 3 500 ₽</option>
+              <option value="3000">Другое — уточните</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label>Зона подачи *</label>
+            <select class="fc" id="calc-z" onchange="calcUpdate()" required>
+              <option value="">— Выберите зону —</option>
+              <option value="0">Москва (внутри МКАД) — без доплат</option>
+              <option value="0">МКАД — без доплат</option>
+              <option value="1500">Московская область — + от 1 500 ₽</option>
+              <option value="8000">Другой город — до 700 км от Москвы — от 8 000 ₽</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label>Приблизительное расстояние (км)</label>
+            <input type="number" class="fc" id="calc-km" placeholder="Например: 15" min="0" oninput="calcUpdate()">
+          </div>
+          <div class="fg">
+            <label>Срочность</label>
+            <select class="fc" id="calc-urg" onchange="calcUpdate()">
+              <option value="0">Прямо сейчас</option>
+              <option value="0">Сегодня</option>
+              <option value="0">Завтра</option>
+              <option value="0">По договорённости</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label>Время подачи</label>
+            <select class="fc" id="calc-time" onchange="calcUpdate()">
+              <option value="1">День (06:00–23:00)</option>
+              <option value="1.2">Ночь (23:00–06:00) +20%</option>
+            </select>
+          </div>
+          <div style="height:1px;background:var(--border);margin:20px 0;"></div>
+          <div class="fg">
+            <label>Ваше имя *</label>
+            <input type="text" class="fc" id="calc-name" placeholder="Как вас зовут?" required>
+          </div>
+          <div class="fg">
+            <label>Телефон *</label>
+            <input type="tel" class="fc" id="calc-phone" placeholder="+7 (___) ___-__-__" required>
+          </div>
+          <div class="fg">
+            <label>Комментарий</label>
+            <textarea class="fc" id="calc-comment" rows="3" placeholder="Сложность погрузки, место, особенности..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-p btn-lg" style="width:100%;justify-content:center;">
+            <svg class="ico"><use href="#i-truck"></use></svg> Рассчитать стоимость и вызвать эвакуатор
+          </button>
+          <p class="privacy">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+        </form>
+      </div>
+
+      <div class="calc-res sf">
+        <div class="res-card">
+          <div class="res-label">Ориентировочная стоимость</div>
+          <div class="res-amount" id="res-amount">—</div>
+          <div class="res-note" id="res-note">Выберите параметры слева</div>
+          <div class="res-chips" id="res-chips">
+            <span class="rchip" id="chip-night"><svg class="ico"><use href="#i-moon"></use></svg> Ночной тариф +20%</span>
+            <span class="rchip" id="chip-oblast"><svg class="ico"><use href="#i-pin"></use></svg> Доплата за выезд за пределы Москвы</span>
+          </div>
+          <a href="tel:+79060204404" class="btn btn-p btn-lg" style="width:100%;justify-content:center;margin-bottom:12px;">
+            <svg class="ico"><use href="#i-phone"></use></svg> Позвонить сейчас
+          </a>
+          <a href="#contacts" class="btn btn-o" style="width:100%;justify-content:center;">
+            <svg class="ico"><use href="#i-chat"></use></svg> Написать в мессенджер
+          </a>
+        </div>
+
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:24px;margin-top:20px;">
+          <div style="font-family:'Russo One',sans-serif;font-size:15px;margin-bottom:12px;">Что входит в стоимость:</div>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div style="display:flex;gap:8px;font-size:13px;color:var(--grey);"><span style="color:var(--teal)">✓</span> Погрузка и фиксация автомобиля</div>
+            <div style="display:flex;gap:8px;font-size:13px;color:var(--grey);"><span style="color:var(--teal)">✓</span> Перевозка до указанной точки</div>
+            <div style="display:flex;gap:8px;font-size:13px;color:var(--grey);"><span style="color:var(--teal)">✓</span> Работа водителя и оператора</div>
+            <div style="display:flex;gap:8px;font-size:13px;color:var(--grey);"><span style="color:var(--teal)">✓</span> Аккуратная разгрузка</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== ADVANTAGES ====== -->
+<section class="section section-alt" id="why">
+  <div class="container">
+    <div class="section-header sf text-c">
+      <div class="s-tag">Почему мы</div>
+      <h2 class="s-title">Почему выбирают наш эвакуатор</h2>
+      <p class="s-sub" style="margin:0 auto 56px;">Мы — реальная компания по эвакуации транспорта в Москве и области. Работаем быстро, честно и прозрачно.</p>
+    </div>
+    <div class="adv-grid">
+      <div class="adv-card sf">
+        <span class="adv-bg">01</span>
+        <span class="adv-ico"><svg class="ico"><use href="#i-bolt"></use></svg></span>
+        <div class="adv-title">Быстрая подача</div>
+        <p class="adv-text">Эвакуаторы в разных округах Москвы. Подача от 30 минут по Москве и МКАД.</p>
+      </div>
+      <div class="adv-card sf">
+        <span class="adv-bg">02</span>
+        <span class="adv-ico"><svg class="ico"><use href="#i-wrench"></use></svg></span>
+        <div class="adv-title">Техника в идеальном состоянии</div>
+        <p class="adv-text">Регулярное ТО, современная платформа с гидроподъёмником, надёжные системы фиксации.</p>
+      </div>
+      <div class="adv-card sf">
+        <span class="adv-bg">03</span>
+        <span class="adv-ico"><svg class="ico"><use href="#i-driver"></use></svg></span>
+        <div class="adv-title">Опытные водители и операторы</div>
+        <p class="adv-text">Водители со стажем от 5 лет, опыт работы с ДТП, сложной погрузкой, узкими дворами.</p>
+      </div>
+      <div class="adv-card sf">
+        <span class="adv-bg">04</span>
+        <span class="adv-ico"><svg class="ico"><use href="#i-clock"></use></svg></span>
+        <div class="adv-title">Работаем 24/7</div>
+        <p class="adv-text">Круглосуточная эвакуация, включая праздники и выходные дни. Никаких исключений.</p>
+      </div>
+      <div class="adv-card sf">
+        <span class="adv-bg">05</span>
+        <span class="adv-ico"><svg class="ico"><use href="#i-money"></use></svg></span>
+        <div class="adv-title">Прозрачные цены</div>
+        <p class="adv-text">Фиксируем стоимость в договоре или в переписке. Без скрытых доплат и накруток.</p>
+      </div>
+      <div class="adv-card sf">
+        <span class="adv-bg">06</span>
+        <span class="adv-ico"><svg class="ico"><use href="#i-building"></use></svg></span>
+        <div class="adv-title">Юрлица и физлица</div>
+        <p class="adv-text">Счета для компаний, акт, договор. Полный пакет документов.</p>
+      </div>
+      <div class="adv-card sf">
+        <span class="adv-bg">07</span>
+        <span class="adv-ico"><svg class="ico"><use href="#i-shield"></use></svg></span>
+        <div class="adv-title">Бережная погрузка</div>
+        <p class="adv-text">Полная погрузка на платформу, без буксировки. Не повреждаем бамперы, подвеску, асфальт.</p>
+      </div>
+      <div class="adv-card sf">
+        <span class="adv-bg">08</span>
+        <span class="adv-ico"><svg class="ico"><use href="#i-clipboard"></use></svg></span>
+        <div class="adv-title">Страхование ответственности</div>
+        <p class="adv-text">Страховка груза на случай непредвиденных ситуаций. Ответственность зафиксирована в договоре.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== HOW WE WORK ====== -->
+<section class="section" id="howwork">
+  <div class="container">
+    <div class="section-header sf text-c">
+      <div class="s-tag">Процесс</div>
+      <h2 class="s-title">Как заказать эвакуатор — 6 простых шагов</h2>
+      <p class="s-sub" style="margin:0 auto 60px;"></p>
+    </div>
+    <div class="steps-row sf">
+      <div class="step">
+        <div class="step-n">1</div>
+        <div class="step-t">Оставляете заявку</div>
+        <p class="step-d">Через форму на сайте, по телефону, в WhatsApp или Telegram</p>
+      </div>
+      <div class="step">
+        <div class="step-n">2</div>
+        <div class="step-t">Менеджер уточняет</div>
+        <p class="step-d">Уточняет тип авто, место погрузки и разгрузки, сложность ситуации</p>
+      </div>
+      <div class="step">
+        <div class="step-n">3</div>
+        <div class="step-t">Считаем стоимость</div>
+        <p class="step-d">Предлагаем оптимальную технику и точную цену без скрытых доплат</p>
+      </div>
+      <div class="step">
+        <div class="step-n">4</div>
+        <div class="step-t">Подтверждаем заказ</div>
+        <p class="step-d">Фиксируем условия в договоре (юрлица) или в переписке (физлица)</p>
+      </div>
+      <div class="step">
+        <div class="step-n">5</div>
+        <div class="step-t">Эвакуатор едет</div>
+        <p class="step-d">Подача от 30 минут. Бережная погрузка и транспортировка до места назначения</p>
+      </div>
+      <div class="step">
+        <div class="step-n">6</div>
+        <div class="step-t">Получаете авто</div>
+        <p class="step-d">Оплата по факту. Выдача документов для юрлиц: акт, договор, счёт</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:48px;" class="sf">
+      <a href="tel:+79060204404" class="btn btn-p btn-lg"><svg class="ico"><use href="#i-truck"></use></svg> Вызвать эвакуатор сейчас</a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== B2B BLOCK ====== -->
+<section style="padding:0 0 60px;">
+  <div class="container">
+    <div class="b2b sf">
+      <span class="b2b-ico"><svg class="ico"><use href="#i-building"></use></svg></span>
+      <div>
+        <div class="b2b-t">Для юридических лиц</div>
+        <p class="b2b-d">Работаем с компаниями, автопарками, каршерингом, автосервисами. Полный документооборот.</p>
+        <div class="b2b-tags">
+          <span class="b2b-tag">Договор</span>
+          <span class="b2b-tag">Акт выполненных работ</span>
+          <span class="b2b-tag">Счёт на оплату</span>
+          <span class="b2b-tag">Безналичный расчёт</span>
+        </div>
+        <a href="#contacts" class="btn btn-y"><svg class="ico"><use href="#i-doc"></use></svg> Получить счёт для компании</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== TRUST ====== -->
+<section class="section section-alt" id="trust">
+  <div class="container">
+    <div class="section-header sf text-c">
+      <div class="s-tag">Надёжность</div>
+      <h2 class="s-title">Надёжность, подтверждённая фактами</h2>
+      <p class="s-sub" style="margin:0 auto 56px;">Реальные цифры, реальные клиенты, реальная техника.</p>
+    </div>
+    <div class="trust-nums sf">
+      <div class="tn"><div class="tn-n" data-count="7">0</div><div class="tn-l">лет на рынке эвакуации Москвы</div></div>
+      <div class="tn"><div class="tn-n" data-count="4800">0</div><div class="tn-l">выполненных заявок</div></div>
+      <div class="tn"><div class="tn-n" data-count="98">0</div><div class="tn-l">% довольных клиентов</div></div>
+    </div>
+    <div class="reviews sf">
+      <div class="rv">
+        <div class="rv-top">
+          <div class="rv-av">А</div>
+          <div>
+            <div class="rv-name">Александр К.</div>
+            <div class="rv-src">Авито Услуги</div>
+          </div>
+        </div>
+        <div class="rv-stars">★★★★★</div>
+        <p class="rv-text">Ночью встал на МКАДе после ДТП, колесо заблокировано. Приехали примерно за 35 минут, погрузили аккуратно. Цена — как и озвучили по телефону, без сюрпризов.</p>
+      </div>
+      <div class="rv">
+        <div class="rv-top">
+          <div class="rv-av">М</div>
+          <div>
+            <div class="rv-name">Марина Д.</div>
+            <div class="rv-src">Авито Услуги</div>
+          </div>
+        </div>
+        <div class="rv-stars">★★★★★</div>
+        <p class="rv-text">Машина заглохла в пробке на Садовом. Написала в WhatsApp — ответили почти сразу, приехали даже раньше, чем сказали. Спокойно, без нервов, спасибо.</p>
+      </div>
+      <div class="rv">
+        <div class="rv-top">
+          <div class="rv-av">И</div>
+          <div>
+            <div class="rv-name">Иван Б., ООО «АвтоПарк»</div>
+            <div class="rv-src">Юридическое лицо</div>
+          </div>
+        </div>
+        <div class="rv-stars">★★★★★</div>
+        <p class="rv-text">Работаем как юрлицо уже год, вывозили несколько наших фургонов. Всегда дают договор, акт, счёт — всё по делу, без задержек.</p>
+      </div>
+      <div class="rv">
+        <div class="rv-top">
+          <div class="rv-av">Д</div>
+          <div>
+            <div class="rv-name">Дмитрий С.</div>
+            <div class="rv-src">Авито Услуги</div>
+          </div>
+        </div>
+        <div class="rv-stars">★★★★★</div>
+        <p class="rv-text">Застрял во дворе, не заводилась машина. Приехали быстро, вытащили аккуратно, асфальт и соседние машины не задели. Нормальные ребята, буду обращаться ещё.</p>
+      </div>
+      <div class="rv">
+        <div class="rv-top">
+          <div class="rv-av">Е</div>
+          <div>
+            <div class="rv-name">Елена П.</div>
+            <div class="rv-src">Авито Услуги</div>
+          </div>
+        </div>
+        <div class="rv-stars">★★★★★</div>
+        <p class="rv-text">Заказывала эвакуатор для подруги, машина сломалась поздно вечером. Водитель созвонился, уточнил всё по адресу, приехал вовремя. Спасибо, что выручили в такой момент.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FAQ ====== -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-header sf text-c">
+      <div class="s-tag">FAQ</div>
+      <h2 class="s-title">Часто задаваемые вопросы</h2>
+      <p class="s-sub" style="margin:0 auto 56px;">Ответы на самые популярные вопросы об эвакуаторе в Москве.</p>
+    </div>
+    <div class="faq-wrap sf">
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Какая минимальная смена?</span>
+          <span class="faq-arr">▼</span>
+        </div>
+        <div class="faq-a">Минимальный заказ — 2 часа (1 смена). Даже если погрузка заняла 30 минут, оплата идёт за минимальное время. Это стандарт рынка.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Есть ли подача по всей Москве?</span>
+          <span class="faq-arr">▼</span>
+        </div>
+        <div class="faq-a">Да, мы работаем по всей Москве: внутри МКАД, по ТТК, Садовому кольцу, во всех округах и районах города. Также выезжаем за МКАД в Московскую область.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Есть ли эвакуатор в других городах, не только в Москве?</span>
+          <span class="faq-arr">▼</span>
+        </div>
+        <div class="faq-a">Да, выезжаем и в другие города на расстоянии до 700 км от Москвы — например, Тверь, Ярославль, Владимир, Рязань, Тула, Калуга, Смоленск, Нижний Новгород, Воронеж, Липецк, Иваново, Кострома. Точную стоимость по конкретному городу уточнит менеджер по телефону.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Работаете ли вы ночью?</span>
+          <span class="faq-arr">▼</span>
+        </div>
+        <div class="faq-a">Да, работаем круглосуточно, 24/7, включая праздники и выходные. Ночная работа (23:00–06:00) — +20% к базовой стоимости.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Можно ли арендовать эвакуатор с экипажем?</span>
+          <span class="faq-arr">▼</span>
+        </div>
+        <div class="faq-a">Да, все эвакуаторы подаются с водителем и оператором. Буксировка без экипажа не осуществляется. Это обеспечивает безопасность вашего автомобиля.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Как быстро вы подаёте эвакуатор?</span>
+          <span class="faq-arr">▼</span>
+        </div>
+        <div class="faq-a">В среднем подача по Москве и МКАД — от 30 минут. Точное время зависит от загрузки, района и времени суток. Менеджер назовёт ориентировочное время при оформлении заказа.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Какие документы нужны для аренды?</span>
+          <span class="faq-arr">▼</span>
+        </div>
+        <div class="faq-a">Для физлиц: только паспортные данные (при необходимости) и телефон. Для юрлиц: ИНН, реквизиты компании, контактное лицо. Договор, акт, счёта предоставляем мы.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Эвакуируете ли вы автомобили после ДТП?</span>
+          <span class="faq-arr">▼</span>
+        </div>
+        <div class="faq-a">Да, эвакуируем машины после аварии: с заблокированными колёсами, повреждённой подвеской, неработающей рулевой системой. Используем полную погрузку на платформу. Бережно доставим на СТО.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Как происходит оплата?</span>
+          <span class="faq-arr">▼</span>
+        </div>
+        <div class="faq-a">Оплата по факту выполнения работ: наличными, переводом на карту, безналичный расчёт для юрлиц. Для компаний — счёта, акт, договор. Никаких предоплат без вашего согласия.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Что делать, если машина застряла в снегу или грязи?</span>
+          <span class="faq-arr">▼</span>
+        </div>
+        <div class="faq-a">Мы вывозим автомобили из снега, грязи, кювета, с парковки. Уточните место и ситуацию при заказе — подберём подходящий эвакуатор и метод погрузки. Звоните в любое время суток.</div>
+      </div>
+
+    </div>
+    <div style="text-align:center;margin-top:40px;" class="sf">
+      <a href="tel:+79060204404" class="btn btn-o btn-lg"><svg class="ico"><use href="#i-phone"></use></svg> Остались вопросы? Позвоните нам</a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CONTACTS ====== -->
+<section class="section" id="contacts">
+  <div class="container">
+    <div class="section-header sf">
+      <div class="s-tag">Контакты</div>
+      <h2 class="s-title">Контакты эвакуатора в Москве и области</h2>
+    </div>
+    <div class="ctc-grid">
+      <div class="sf">
+        <a href="tel:+79060204404" class="ctc-ph">+7 906 020-44-04</a>
+        <div class="ctc-ph-sub">Звонок бесплатный · Ответим за 30 секунд</div>
+
+        <div class="ctc-methods">
+          <a href="https://wa.me/79060204404" class="ctc-item">
+            <div class="ctc-icon ci-wa"><svg class="ico"><use href="#i-chat"></use></svg></div>
+            <div>
+              <div class="ctc-lbl">WhatsApp</div>
+              <div class="ctc-val">+7 906 020-44-04</div>
+            </div>
+          </a>
+          <a href="https://t.me/moscowevak" class="ctc-item">
+            <div class="ctc-icon ci-tg"><svg class="ico"><use href="#i-plane"></use></svg></div>
+            <div>
+              <div class="ctc-lbl">Telegram</div>
+              <div class="ctc-val">@moscowevak</div>
+            </div>
+          </a>
+          <a href="#" class="ctc-item">
+            <div class="ctc-icon ci-av"><svg class="ico"><use href="#i-tag"></use></svg></div>
+            <div>
+              <div class="ctc-lbl">Авито</div>
+              <div class="ctc-val">МоскваЭвак на Авито</div>
+            </div>
+          </a>
+          <a href="mailto:info@moscowevak.ru" class="ctc-item">
+            <div class="ctc-icon ci-em"><svg class="ico"><use href="#i-mail"></use></svg></div>
+            <div>
+              <div class="ctc-lbl">Email</div>
+              <div class="ctc-val">info@moscowevak.ru</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="wh-box">
+          <div class="wh-24">24/7</div>
+          <div class="wh-sub">Круглосуточно, без выходных и праздников</div>
+          <div style="margin-top:12px;font-size:13px;color:var(--grey);">
+            Зона обслуживания: <strong style="color:#fff;">Москва, МКАД, Московская область</strong><br>
+            <span style="font-size:12px;">а также другие города — до 700 км от Москвы (уточняйте у менеджера)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sf">
+        <div class="ctc-form-wrap">
+          <div class="ctc-f-title">Оставить заявку</div>
+          <div class="ctc-f-sub">Перезвоним в течение 5 минут</div>
+          <form onsubmit="submitForm(event,'contacts-form')">
+            <div class="fg">
+              <label>Тип транспортного средства</label>
+              <select class="fc" id="ctc-type">
+                <option value="">— Выберите тип —</option>
+                <option>Легковой автомобиль</option>
+                <option>Внедорожник / Джип</option>
+                <option>Микроавтобус</option>
+                <option>Грузовик до 3,5 т</option>
+                <option>Авто после ДТП</option>
+                <option>Другое</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label>Зона подачи</label>
+              <select class="fc" id="ctc-zone">
+                <option value="">— Выберите зону —</option>
+                <option>Москва (внутри МКАД)</option>
+                <option>МКАД</option>
+                <option>Московская область</option>
+                <option>Другой город — до 700 км от Москвы</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label>Имя *</label>
+              <input type="text" class="fc" id="ctc-name" placeholder="Ваше имя" required>
+            </div>
+            <div class="fg">
+              <label>Телефон *</label>
+              <input type="tel" class="fc" id="ctc-phone" placeholder="+7 (___) ___-__-__" required>
+            </div>
+            <div class="fg">
+              <label>Комментарий</label>
+              <textarea class="fc" id="ctc-comment" rows="3" placeholder="Дополнительная информация..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-p btn-lg" style="width:100%;justify-content:center;">
+              <svg class="ico"><use href="#i-truck"></use></svg> Вызвать эвакуатор
+            </button>
+            <p class="privacy">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+          <div class="logo-sq"><svg class="ico"><use href="#i-truck"></use></svg></div>
+          <div class="logo-name">Москва<span>Эвак</span></div>
+        </div>
+        <p class="ft-desc">Быстрый, надёжный эвакуатор для легковых и грузовых авто в Москве и Московской области. Подача от 30 минут. Работа 24/7.</p>
+        <div style="margin-top:20px;display:flex;gap:10px;">
+          <a href="tel:+79060204404" style="font-family:'Russo One',sans-serif;font-size:16px;color:#fff;">+7 906 020-44-04</a>
+        </div>
+      </div>
+      <div>
+        <div class="ft-col-t">Услуги</div>
+        <ul class="ft-links">
+          <li><a href="#">Эвакуатор легкового авто</a></li>
+          <li><a href="#">Эвакуатор внедорожника</a></li>
+          <li><a href="#">Эвакуатор микроавтобуса</a></li>
+          <li><a href="#">Эвакуатор грузовика</a></li>
+          <li><a href="#">Эвакуатор после ДТП</a></li>
+          <li><a href="#">Эвакуатор с парковки</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="ft-col-t">Информация</div>
+        <ul class="ft-links">
+          <li><a href="#">О компании</a></li>
+          <li><a href="#">Документы и лицензии</a></li>
+          <li><a href="#">Цены на эвакуатор</a></li>
+          <li><a href="#">Эвакуатор для юрлиц</a></li>
+          <li><a href="#">Отзывы клиентов</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="ft-col-t">Режим работы</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--teal);line-height:1;margin-bottom:8px;">24/7</div>
+        <div style="font-size:13px;color:var(--grey);margin-bottom:16px;">Круглосуточно, без выходных</div>
+        <div style="font-size:13px;color:var(--grey);margin-bottom:8px;"><svg class="ico"><use href="#i-pin"></use></svg> Москва, МО и другие города до 700 км</div>
+        <div style="font-size:13px;color:var(--grey);"><svg class="ico"><use href="#i-bolt"></use></svg> Подача от 30 минут</div>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <div class="ft-copy">© 2026 МоскваЭвак. Все права защищены.</div>
+      <div style="display:flex;gap:20px;">
+        <a href="#" style="font-size:12px;color:var(--muted);">Политика конфиденциальности</a>
+        <a href="#" style="font-size:12px;color:var(--muted);">Пользовательское соглашение</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== LEAD POPUP ====== -->
+<div class="lead-popup" id="lead-popup">
+  <button class="lp-close" onclick="closeLeadPopup()" aria-label="Закрыть">&times;</button>
+  <div class="lp-ico"><svg class="ico"><use href="#i-alert"></use></svg></div>
+  <div class="lp-t">Машина встала на трассе?</div>
+  <p class="lp-d">Звоните — эвакуатор выедет прямо сейчас. Подача от 30 минут по Москве и МКАД.</p>
+  <a href="tel:+79060204404" class="lp-ph">+7 906 020-44-04</a>
+  <a href="tel:+79060204404" class="btn btn-p" style="width:100%;justify-content:center;">Позвонить срочно</a>
+</div>
+
+<!-- ====== MOBILE STICKY BAR ====== -->
+<div class="sb">
+  <div class="sb-row">
+    <a href="tel:+79060204404" class="sb-btn sb-call">
+      <span class="sb-ico"><svg class="ico"><use href="#i-phone"></use></svg></span>
+      Позвонить
+    </a>
+    <a href="https://wa.me/79060204404" class="sb-btn sb-wa">
+      <span class="sb-ico"><svg class="ico"><use href="#i-chat"></use></svg></span>
+      WhatsApp
+    </a>
+    <a href="https://t.me/moscowevak" class="sb-btn sb-tg">
+      <span class="sb-ico"><svg class="ico"><use href="#i-plane"></use></svg></span>
+      Telegram
+    </a>
+    <a href="#" class="sb-btn sb-av">
+      <span class="sb-ico"><svg class="ico"><use href="#i-tag"></use></svg></span>
+      Авито
+    </a>
+  </div>
+</div>
+
+<!-- ====== JAVASCRIPT ====== -->
+<script>
+  // Nav scroll
+  window.addEventListener('scroll', () => {
+    document.getElementById('nav').classList.toggle('stuck', window.scrollY > 20);
+  });
+
+  // Burger menu
+  const burger = document.getElementById('burger');
+  const mobnav = document.getElementById('mobnav');
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    mobnav.classList.toggle('open');
+  });
+  function closeMob() {
+    burger.classList.remove('open');
+    mobnav.classList.remove('open');
+  }
+
+  // ====== Telegram: отправка заявок ======
+  // 1) Напишите @BotFather в Telegram -> команда /newbot -> скопируйте токен.
+  // 2) Напишите новому боту любое сообщение, затем откройте в браузере
+  //    https://api.telegram.org/bot<ВАШ_ТОКЕН>/getUpdates и найдите "chat":{"id": ...} — это chat_id.
+  // 3) Вставьте токен и chat_id вместо заглушек ниже — заявки начнут прилетать в Telegram.
+  const TELEGRAM_BOT_TOKEN = 'ВСТАВЬТЕ_ТОКЕН_БОТА';
+  const TELEGRAM_CHAT_ID   = 'ВСТАВЬТЕ_CHAT_ID';
+
+  function selectText(el) {
+    if (!el) return '';
+    if (el.tagName === 'SELECT') {
+      return (el.selectedOptions[0] && el.selectedOptions[0].textContent.trim()) || '';
+    }
+    return (el.value || '').trim();
+  }
+
+  function collectLeadData(formId) {
+    if (formId === 'hero-form') {
+      return {
+        formId, name: selectText(document.getElementById('hero-name')),
+        phone: selectText(document.getElementById('hero-phone')),
+        vehicle: selectText(document.querySelector('select[name="vehicle"]')),
+        zone: selectText(document.querySelector('select[name="zone"]')),
+        comment: ''
+      };
+    }
+    if (formId === 'calc-form') {
+      return {
+        formId, name: selectText(document.getElementById('calc-name')),
+        phone: selectText(document.getElementById('calc-phone')),
+        vehicle: selectText(document.getElementById('calc-v')),
+        zone: selectText(document.getElementById('calc-z')),
+        comment: selectText(document.getElementById('calc-comment'))
+      };
+    }
+    return {
+      formId, name: selectText(document.getElementById('ctc-name')),
+      phone: selectText(document.getElementById('ctc-phone')),
+      vehicle: selectText(document.getElementById('ctc-type')),
+      zone: selectText(document.getElementById('ctc-zone')),
+      comment: selectText(document.getElementById('ctc-comment'))
+    };
+  }
+
+  function sendLeadToTelegram(data) {
+    if (!TELEGRAM_BOT_TOKEN || TELEGRAM_BOT_TOKEN.startsWith('ВСТАВЬТЕ')) {
+      console.warn('Telegram не настроен: заполните TELEGRAM_BOT_TOKEN и TELEGRAM_CHAT_ID в коде сайта (см. комментарий в <script>).');
+      return;
+    }
+    const lines = ['Новая заявка с сайта МоскваЭвак'];
+    if (data.name) lines.push('Имя: ' + data.name);
+    if (data.phone) lines.push('Телефон: ' + data.phone);
+    if (data.vehicle) lines.push('Транспорт: ' + data.vehicle);
+    if (data.zone) lines.push('Зона подачи: ' + data.zone);
+    if (data.comment) lines.push('Комментарий: ' + data.comment);
+    lines.push('Форма: ' + data.formId);
+    const text = lines.join('\n');
+
+    fetch('https://api.telegram.org/bot' + TELEGRAM_BOT_TOKEN + '/sendMessage', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text })
+    }).catch(err => console.error('Не удалось отправить заявку в Telegram:', err));
+  }
+
+  // ====== Попап "машина на трассе" — показываем через 10 секунд ======
+  function closeLeadPopup() {
+    const p = document.getElementById('lead-popup');
+    if (p) p.classList.remove('show');
+    try { sessionStorage.setItem('leadPopupClosed', '1'); } catch (e) {}
+  }
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      let closed = false;
+      try { closed = sessionStorage.getItem('leadPopupClosed') === '1'; } catch (e) {}
+      if (!closed) {
+        const p = document.getElementById('lead-popup');
+        if (p) p.classList.add('show');
+      }
+    }, 10000);
+  });
+
+  // Calculator
+  const prices = { '2500': 2500, '3000': 3000, '3500': 3500 };
+  function calcUpdate() {
+    const vEl = document.getElementById('calc-v');
+    const zEl = document.getElementById('calc-z');
+    const kmEl = document.getElementById('calc-km');
+    const timeEl = document.getElementById('calc-time');
+
+    const basePrice = parseInt(vEl.value) || 0;
+    const zoneAdd = parseInt(zEl.value) || 0;
+    const km = parseInt(kmEl.value) || 0;
+    const timeMult = parseFloat(timeEl.value) || 1;
+
+    if (!basePrice) {
+      document.getElementById('res-amount').textContent = '—';
+      document.getElementById('res-note').textContent = 'Выберите параметры слева';
+      return;
+    }
+
+    let total = basePrice + zoneAdd + (km > 10 ? (km - 10) * 50 : 0);
+    total = Math.round(total * timeMult);
+
+    document.getElementById('res-amount').textContent = total.toLocaleString('ru') + ' ₽';
+    document.getElementById('res-note').textContent = 'Ориентировочная стоимость · уточните у менеджера';
+
+    document.getElementById('chip-night').classList.toggle('show', timeMult > 1);
+    document.getElementById('chip-oblast').classList.toggle('show', zoneAdd > 0);
+  }
+
+  // FAQ accordion
+  function toggleFaq(el) {
+    const item = el.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  // Form submission
+  function submitForm(e, formId) {
+    e.preventDefault();
+    sendLeadToTelegram(collectLeadData(formId));
+    const btn = e.target.querySelector('button[type="submit"]');
+    const orig = btn.innerHTML;
+    btn.innerHTML = '<svg class="ico ico-teal"><use href="#i-check"></use></svg> Заявка отправлена! Перезвоним в течение 5 минут';
+    btn.disabled = true;
+    btn.style.background = 'linear-gradient(135deg, #00C9A7, #00A887)';
+    setTimeout(() => {
+      btn.innerHTML = orig;
+      btn.disabled = false;
+      btn.style.background = '';
+      e.target.reset();
+      if (formId === 'calc-form') {
+        document.getElementById('res-amount').textContent = '—';
+        document.getElementById('res-note').textContent = 'Выберите параметры слева';
+      }
+    }, 4000);
+  }
+
+  // Scroll fade-in
+  const sfEls = document.querySelectorAll('.sf');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  sfEls.forEach(el => obs.observe(el));
+
+  // Counter animation
+  function animCount(el, target) {
+    let cur = 0;
+    const step = Math.max(1, Math.floor(target / 60));
+    const t = setInterval(() => {
+      cur = Math.min(cur + step, target);
+      el.textContent = cur.toLocaleString('ru');
+      if (cur >= target) clearInterval(t);
+    }, 25);
+  }
+  const cntObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const target = parseInt(e.target.dataset.count);
+        animCount(e.target, target);
+        cntObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('[data-count]').forEach(el => cntObs.observe(el));
+
+  // Phone mask
+  document.querySelectorAll('input[type="tel"]').forEach(inp => {
+    inp.addEventListener('input', function() {
+      let v = this.value.replace(/\D/g, '');
+      if (v.startsWith('8')) v = '7' + v.slice(1);
+      if (v.startsWith('7')) {
+        let f = '+7';
+        if (v.length > 1) f += ' (' + v.slice(1, 4);
+        if (v.length >= 4) f += ') ' + v.slice(4, 7);
+        if (v.length >= 7) f += '-' + v.slice(7, 9);
+        if (v.length >= 9) f += '-' + v.slice(9, 11);
+        this.value = f;
+      }
+    });
+  });
+</script>
+</body>
+</html>
