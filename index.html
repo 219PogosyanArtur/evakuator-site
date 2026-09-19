@@ -6,6 +6,9 @@
   <title>Эвакуатор в Москве и Московской области — подача от 30 минут, 24/7 | МоскваЭвак</title>
   <meta name="description" content="Эвакуатор легкового авто, внедорожника, микроавтобуса и грузовика до 3,5 т. Подача от 30 минут по Москве и МКАД. Работа 24/7, фиксированные цены, работаем по договору.">
   <meta name="keywords" content="эвакуатор москва, аренда эвакуатора москва, эвакуатор 24 часа, эвакуатор после дтп москва, эвакуатор дешево москва">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -445,8 +448,6 @@
     .ctc-icon { width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
     .ci-wa  { background: rgba(37,211,102,.1); }
     .ci-tg  { background: rgba(0,136,204,.1); }
-    .ci-av  { background: rgba(0,196,130,.1); }
-    .ci-em  { background: rgba(255,178,0,.1); }
     .ci-mx  { background: rgba(71,26,255,.1); }
     .ctc-lbl  { font-size: 11px; color: var(--grey); text-transform: uppercase; letter-spacing: .5px; }
     .ctc-val  { font-size: 15px; font-weight: 600; }
@@ -467,7 +468,7 @@
       border-top: 1px solid var(--border);
       padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
     }
-    .sb-row { display: grid; grid-template-columns: repeat(5,1fr); gap: 6px; }
+    .sb-row { display: grid; grid-template-columns: repeat(4,1fr); gap: 8px; }
     .sb-btn {
       display: flex; flex-direction: column; align-items: center; gap: 3px;
       padding: 8px 4px; border-radius: var(--rs); font-size: 10px; font-weight: 700;
@@ -477,7 +478,6 @@
     .sb-call { background: var(--og); color: #fff; }
     .sb-wa   { background: rgba(37,211,102,.12); color: #25D366; border: 1px solid rgba(37,211,102,.2); }
     .sb-tg   { background: rgba(0,136,204,.12); color: #0088CC; border: 1px solid rgba(0,136,204,.2); }
-    .sb-av   { background: rgba(0,196,130,.12); color: #00C482; border: 1px solid rgba(0,196,130,.2); }
     .sb-mx   { background: rgba(71,26,255,.12); color: #471AFF; border: 1px solid rgba(71,26,255,.2); }
 
     /* ====== FOOTER ====== */
@@ -1331,20 +1331,6 @@
               <div class="ctc-val">Написать в MAX</div>
             </div>
           </a>
-          <a href="#" class="ctc-item">
-            <div class="ctc-icon ci-av"><svg class="ico"><use href="#i-tag"></use></svg></div>
-            <div>
-              <div class="ctc-lbl">Авито</div>
-              <div class="ctc-val">МоскваЭвак на Авито</div>
-            </div>
-          </a>
-          <a href="mailto:info@moscowevak.ru" class="ctc-item">
-            <div class="ctc-icon ci-em"><svg class="ico"><use href="#i-mail"></use></svg></div>
-            <div>
-              <div class="ctc-lbl">Email</div>
-              <div class="ctc-val">info@moscowevak.ru</div>
-            </div>
-          </a>
         </div>
 
         <div class="wh-box">
@@ -1490,10 +1476,6 @@
       <span class="sb-ico"><svg class="ico"><use href="#i-chat"></use></svg></span>
       MAX
     </a>
-    <a href="#" class="sb-btn sb-av">
-      <span class="sb-ico"><svg class="ico"><use href="#i-tag"></use></svg></span>
-      Авито
-    </a>
   </div>
 </div>
 
@@ -1521,7 +1503,7 @@
   // 2) Напишите новому боту любое сообщение, затем откройте в браузере
   //    https://api.telegram.org/bot<ВАШ_ТОКЕН>/getUpdates и найдите "chat":{"id": ...} — это chat_id.
   // 3) Вставьте токен и chat_id вместо заглушек ниже — заявки начнут прилетать в Telegram.
-  const TELEGRAM_BOT_TOKEN = '8881178777:AAF86zjIIig1H_XorxLs8G3CbIKJo8lf2kU';
+  const TELEGRAM_BOT_TOKEN = '8881178777:AAGZJjFOdYfeU18IvoA0HvTwsSw5B-xp0ek';
   const TELEGRAM_CHAT_ID   = '8762084741';
 
   function selectText(el) {
