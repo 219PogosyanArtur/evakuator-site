@@ -56,7 +56,7 @@
 
     /* ====== HELPERS ====== */
     .container { max-width: 1260px; margin: 0 auto; padding: 0 24px; }
-    .section    { padding: 100px 0; }
+    .section    { padding: 100px 0; scroll-margin-top: 90px; }
     .section-alt { background: var(--bg2); }
     .text-c     { text-align: center; }
     .text-o     { color: var(--orange2); }
@@ -551,8 +551,29 @@
       .adv-grid { grid-template-columns: 1fr; }
     }
   </style>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    window.YM_ID = '113655515';
+    window.dataLayer = window.dataLayer || [];
+    (function(m,e,t,r,i,k,a){
+    m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=113655515', 'ym');
+
+    ym(113655515, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+
+    // Безопасная отправка цели (ничего не делает, если Метрика не загрузилась)
+    function ymGoal(name) {
+      try { if (typeof ym === 'function') ym(113655515, 'reachGoal', name); } catch (e) {}
+    }
+  </script>
+  <!-- /Yandex.Metrika counter -->
 </head>
 <body>
+<noscript><div><img src="https://mc.yandex.ru/watch/113655515" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
 
 <svg style="display:none" aria-hidden="true">
   <symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 16V7a1 1 0 0 1 1-1h9v10"/><path d="M12 10h4l4 3.5V16"/><circle cx="7" cy="18" r="1.6"/><circle cx="16.5" cy="18" r="1.6"/><path d="M2 16h2M9.5 18h5.4M18.1 18H20a1 1 0 0 0 1-1v-2.2"/></symbol>
@@ -1502,29 +1523,16 @@
     mobnav.classList.remove('open');
   }
 
-  // ====== Telegram: отправка заявок ======
-  // 1) Напишите @BotFather в Telegram -> команда /newbot -> скопируйте токен.
-  // 2) Напишите новому боту любое сообщение, затем откройте в браузере
-  //    https://api.telegram.org/bot<ВАШ_ТОКЕН>/getUpdates и найдите "chat":{"id": ...} — это chat_id.
-  // 3) Вставьте токен и chat_id вместо заглушек ниже — заявки начнут прилетать в Telegram.
-  const TELEGRAM_BOT_TOKEN = '8881178777:AAGZJjFOdYfeU18IvoA0HvTwsSw5B-xp0ek';
-  const TELEGRAM_CHAT_ID   = '8762084741';
-
-  // ====== MAX: резервный канал заявок (на случай блокировки Telegram Bot API без VPN) ======
-  // ВАЖНО: сейчас в MAX завести бота может только верифицированное ООО (ИП и самозанятые
-  // пока не могут — таковы правила площадки). Если у вас нет ООО, просто оставьте
-  // 'ВСТАВЬТЕ_ТОКЕН' ниже как есть — сайт продолжит работать, просто без дублирования в MAX.
-  // Когда бот будет доступен:
-  // 1) Зайдите на https://business.max.ru/self -> раздел «Чат-боты» -> «Создать».
-  //    Бот уходит на модерацию (обычно до 48 часов), после публикации в его настройках
-  //    появится токен — скопируйте его.
-  // 2) Напишите этому боту любое сообщение с телефона/аккаунта, куда должны приходить заявки.
-  // 3) Сделайте запрос (например, в браузере или через curl) с заголовком
-  //    Authorization: <ВАШ_ТОКЕН> на https://platform-api2.max.ru/updates — в ответе найдите
-  //    "user_id" отправителя (это и есть MAX_CHAT_ID).
-  // 4) Вставьте токен и id вместо заглушек ниже — заявки начнут дублироваться в MAX.
-  const MAX_BOT_TOKEN = 'ВСТАВЬТЕ_ТОКЕН_БОТА_MAX';
-  const MAX_CHAT_ID   = 'ВСТАВЬТЕ_ID_ЧАТА_MAX';
+  // ====== Приём заявок: через собственный Worker (а не напрямую из браузера в Telegram) ======
+  // Раньше браузер посетителя сам стучался в api.telegram.org — если у посетителя не было
+  // доступа к Telegram (блокировка/оператор/роутер), заявка просто терялась без следа.
+  // Теперь заявка уходит на свой сервер (Cloudflare Worker), который её сохраняет и уже сам,
+  // со своей стороны, пересылает в Telegram. Так заявка не теряется, даже если Telegram в
+  // этот момент недоступен, а все заявки видно в отдельной админ-панели (/admin на адресе
+  // Worker'а) вместе со статусами и кнопкой "переслать ещё раз".
+  // Как получить адрес: см. документ с инструкцией по деплою Worker. Вставьте сюда его URL
+  // вида https://<имя-воркера>.<аккаунт>.workers.dev/lead
+  const LEAD_ENDPOINT = 'ВСТАВЬТЕ_URL_WORKER/lead';
 
   function selectText(el) {
     if (!el) return '';
@@ -1534,7 +1542,7 @@
     return (el.value || '').trim();
   }
 
-  // ====== Названия форм (для заявок в Telegram/MAX) ======
+  // ====== Названия форм (для текста заявки) ======
   const FORM_LABELS = {
     'hero-form': 'Форма-обычная',
     'calc-form': 'Форма-калькулятор',
@@ -1657,30 +1665,21 @@
     return lines.join('\n');
   }
 
-  function sendLeadToTelegram(data) {
+  function sendLead(data) {
     const text = buildLeadText(data);
+    ymGoal('lead_form');
+    ymGoal('lead_' + (data.formId || 'form').replace(/-/g, '_'));
 
-    if (TELEGRAM_BOT_TOKEN && !TELEGRAM_BOT_TOKEN.startsWith('ВСТАВЬТЕ')) {
-      fetch('https://api.telegram.org/bot' + TELEGRAM_BOT_TOKEN + '/sendMessage', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text })
-      }).catch(err => console.error('Не удалось отправить заявку в Telegram:', err));
-    } else {
-      console.warn('Telegram не настроен: заполните TELEGRAM_BOT_TOKEN и TELEGRAM_CHAT_ID в коде сайта (см. комментарий в <script>).');
+    if (!LEAD_ENDPOINT || LEAD_ENDPOINT.startsWith('ВСТАВЬТЕ')) {
+      console.warn('Приём заявок не настроен: заполните LEAD_ENDPOINT в коде сайта (см. комментарий в <script>).');
+      return;
     }
 
-    // ====== MAX: дублируем заявку, если бот подключён ======
-    // Telegram Bot API у части посетителей заблокирован в РФ без VPN — из-за этого
-    // заявки иногда не доходят. MAX не блокируется, поэтому заявка дублируется туда вторым каналом.
-    // Как получить токен и chat_id — см. подробную инструкцию в комментарии у объявления MAX_BOT_TOKEN ниже.
-    if (MAX_BOT_TOKEN && !MAX_BOT_TOKEN.startsWith('ВСТАВЬТЕ')) {
-      fetch('https://platform-api2.max.ru/messages?chat_id=' + MAX_CHAT_ID, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Authorization': MAX_BOT_TOKEN },
-        body: JSON.stringify({ text })
-      }).catch(err => console.error('Не удалось отправить заявку в MAX:', err));
-    }
+    fetch(LEAD_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ...data, text })
+    }).catch(err => console.error('Не удалось отправить заявку:', err));
   }
 
   // ====== Попап "машина на трассе" — показываем через 10 секунд ======
@@ -1767,7 +1766,7 @@
     if (!ok) return;
     data.phone = '+' + getPhoneDigits(data.phone);
 
-    sendLeadToTelegram(data);
+    sendLead(data);
     const btn = e.target.querySelector('button[type="submit"]');
     const orig = btn.innerHTML;
     btn.innerHTML = '<svg class="ico ico-teal"><use href="#i-check"></use></svg> Заявка отправлена! Перезвоним в течение 5 минут';
@@ -1784,6 +1783,17 @@
       }
     }, 4000);
   }
+
+  // Цели Метрики: клики по телефону и мессенджерам
+  document.addEventListener('click', function (e) {
+    const a = e.target.closest && e.target.closest('a[href]');
+    if (!a) return;
+    const h = a.getAttribute('href') || '';
+    if (h.startsWith('tel:')) ymGoal('click_phone');
+    else if (h.includes('wa.me')) ymGoal('click_whatsapp');
+    else if (h.includes('t.me/')) ymGoal('click_telegram');
+    else if (h.includes('max.ru')) ymGoal('click_max');
+  });
 
   // Scroll fade-in
   const sfEls = document.querySelectorAll('.sf');
